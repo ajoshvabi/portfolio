@@ -366,7 +366,7 @@ export const Portfolio = () => {
                             </video>
                         </div>
                     </Col>
-                    <Col md className=" d-flex justify-content-center  align-items-center px-md-5 ">
+                    <Col md className=" d-flex justify-content-center  align-items-center ">
                         <div>
                             <h5><b >Job Portal</b></h5>
                             <p>
@@ -374,7 +374,7 @@ export const Portfolio = () => {
                                 effortlessly post listings, review profiles, and make hires. The project highlights my web
                                 development skills, incorporating libraries for improved design and functionality.
                             </p>
-                            <Row className="py-3 mx-auto">
+                            <Row className=" mx-auto   ">
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
                                 </Col>
@@ -388,16 +388,16 @@ export const Portfolio = () => {
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
                                 </Col>
-                                <Col xs={1} className="px-4 mx-2">
+                                <Col xs={1} className="mx-2 px-3 ">
                                     <img src="https://react-bootstrap.netlify.app/img/logo.svg" className="stackicon" alt="" />
                                 </Col>
                             </Row>
-                            <Row className="py-3 mx-auto d-flex align-items-center justify-content-center justify-content-lg-start">
-                                <Col xs={3} className="mx-2">
-                                    <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
+                            <Row className="py-3">
+                                 <Col>
+                                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
                                         <button className="cssbuttons-io" >
                                             <span>
-                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0 0h24v24H0z" fill="none"></path>
                                                     <path
                                                         d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
@@ -409,15 +409,34 @@ export const Portfolio = () => {
                                         </button>
                                     </a>
                                 </Col>
-                                {/* <Col xs={3} className=" mx-2">
-                                    <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
+                                {/* <Col xs lg={3} className=" d-flex justify-content-end " >
+                                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
                                         <button className="cssbuttons-io" >
                                             <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path
+                                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                        fill="currentColor">
+                                                    </path>
                                                 </svg>
-                                                Demo
+                                                Code
+                                            </span>
+                                        </button>
+                                    </a>
+                                </Col> */}
+                                {/* <Col xs={6} lg={3} className="d-flex justify-content-start" >
+                                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
+                                        <button className="cssbuttons-io" >
+                                            <span>
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path
+                                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                        fill="currentColor">
+                                                    </path>
+                                                </svg>
+                                                Code
                                             </span>
                                         </button>
                                     </a>
@@ -440,7 +459,7 @@ export const Portfolio = () => {
                                 design and user-friendly approach, Insure offers a seamless and engaging experience for users
                                 exploring insurance details.
                             </p>
-                            <Row className="py-3 mx-auto">
+                            <Row className="mx-auto">
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
                                 </Col>
@@ -449,9 +468,10 @@ export const Portfolio = () => {
                                 </Col>
 
                             </Row>
-                            <Row className="py-3 mx-auto d-flex align-items-center justify-content-center justify-content-lg-start">
-                                <Col xs={3} className="mx-2">
-                                    <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
+         
+                                                        <Row className="py-3">
+                                <Col  xs={6} lg={3}  className=" d-flex justify-content-end " >
+                                <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
                                         <button className="cssbuttons-io" >
                                             <span>
                                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="16" width="16">
@@ -466,8 +486,8 @@ export const Portfolio = () => {
                                         </button>
                                     </a>
                                 </Col>
-                                <Col xs={3} className=" mx-2">
-                                    <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
+                                <Col  xs={6} lg={3}  className="d-flex justify-content-start" >
+                                <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
                                         <button className="cssbuttons-io" >
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
@@ -501,7 +521,7 @@ export const Portfolio = () => {
                                 This project is about connect multiple hospital under a common network
                                 and enable easy data transfer among hospital and shift patients etc...
                             </p>
-                            <Row className="py-3 mx-auto">
+                            <Row className="mx-auto   ">
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
                                 </Col>
@@ -511,7 +531,7 @@ export const Portfolio = () => {
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
                                 </Col>
-                                <Col xs={1} className="px-4 mx-2">
+                                <Col xs={1} className="mx-2 px-4 ">
                                     <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
                                 </Col>
                             </Row>
@@ -548,7 +568,7 @@ export const Portfolio = () => {
                                 This project is about connect multiple hospital under a common network
                                 and enable easy data transfer among hospital and shift patients etc...
                             </p>
-                            <Row className="py-3 mx-auto">
+                            <Row className="mx-auto ">
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
                                 </Col>
@@ -558,7 +578,7 @@ export const Portfolio = () => {
                                 <Col xs={1} className="px-4 mx-2">
                                     <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
                                 </Col>
-                                <Col xs={1} className="px-4 mx-2">
+                                <Col xs={1} className="mx-2 px-4 ">
                                     <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
                                 </Col>
                             </Row>
