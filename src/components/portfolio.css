@@ -15,6 +15,7 @@ body{
     --imgshadow:rgba(179, 236, 240, 0.504);
     --textcolor:#1C1E21;
     --projectborder:#1c1e212f;
+    --bgshadow:rgba(0, 0, 0, 0.589);
 
 }
 .darkTheme{
@@ -24,7 +25,7 @@ body{
     background-color: #1B1B1D;
     --textcolor:#E3E3E3;
     --projectborder:#e3e3e32d;
-
+    --bgshadow:rgba(168, 168, 168, 0.396);
 
 
 
@@ -81,7 +82,7 @@ body{
     transition: ease 0.5s;
 }
 .image-with-shadow {
-  filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.589));
+  filter: drop-shadow(8px 10px 10px var(--bgshadow));
   transition: ease-in-out 0.5s;
 }
 .image-with-shadow:hover {

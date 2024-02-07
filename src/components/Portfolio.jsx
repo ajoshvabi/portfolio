@@ -65,7 +65,6 @@ export const Portfolio = () => {
             }
         }, speed);
 
-        // Clean up the interval on component unmount
         return () => clearInterval(intervalId);
     }, [i, offset, forwards, skip_count]);
 
@@ -394,7 +393,7 @@ export const Portfolio = () => {
                             </Row>
                             <Row className="py-3">
                                  <Col>
-                                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
+                                    <a href="https://github.com/ajoshvabi/jobapp" target="_blank">
                                         <button className="cssbuttons-io" >
                                             <span>
                                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
