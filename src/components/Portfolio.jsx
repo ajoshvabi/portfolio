@@ -742,7 +742,7 @@ export const Portfolio = () => {
                             </Col>
                             <Col md className=" d-flex justify-content-center  align-items-center">
                                 <div>
-                                    <h5><b >Shoping App</b></h5>
+                                    <h5><b >Shopping App</b></h5>
                                     <p>Created a simple Flutter shopping app with a user-friendly interface and integrated API calls
                                         for product data, showcasing proficiency in mobile app development,
                                         API integration, and UI design.
