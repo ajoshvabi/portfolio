@@ -236,68 +236,68 @@ export const Portfolio = () => {
                 </div>
                 <Row className="mx-auto ">
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" /><br />
                         </Fade>
                         <p>Html</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" /><br />
                         </Fade>
                         <p>Css</p>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><br />
                         </Fade>
                         <p>Js</p>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="" /><br />
                         </Fade>
                         <p>Flutter</p>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="" /><br />
                         </Fade>
                         <p>Dart</p>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" className="img-fluid" /><br />
                         </Fade>
                         <p>React.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" /><br />
                         </Fade>
                         <p>Node.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://skillicons.dev/icons?i=express" alt="" /><br />
                         </Fade>
                         <p>Express.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" /><br />
                         </Fade>
                         <p>MongoDb</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.simpleicons.org/redux/764ABC" alt="" /><br />
                         </Fade>
@@ -305,7 +305,7 @@ export const Portfolio = () => {
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="" /><br />
                         </Fade>
@@ -313,42 +313,42 @@ export const Portfolio = () => {
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" /><br />
                         </Fade>
                         <p>Git</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://skillicons.dev/icons?i=github" alt="" /><br />
                         </Fade>
                         <p>GitHub</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" /><br />
                         </Fade>
                         <p>Bootstrap</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://react-bootstrap.netlify.app/img/logo.svg" alt="" /><br />
                         </Fade>
                         <p> React Bootstrap</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://jwt.io/img/pic_logo.svg" alt="" /><br />
                         </Fade>
                         <p>JWT</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img className=" rounded-3 " src="data:image/png;base64,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" alt="" /><br />
                         </Fade>
@@ -356,7 +356,7 @@ export const Portfolio = () => {
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.simpleicons.org/php/777BB4" alt="" /><br />
                         </Fade>
@@ -364,35 +364,35 @@ export const Portfolio = () => {
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" /><br />
                         </Fade>
                         <p>MySql</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="" /><br />
                         </Fade>
                         <p>Codeigniter</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="" /><br />
                         </Fade>
                         <p>npm</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.simpleicons.org/postman/FF6C37" alt="" /><br />
                         </Fade>
                         <p>Postman</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-5 text-center ">
-                        <Fade direction="up" duration={1000}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src={api} alt="" className="rounded-5" /><br />
                         </Fade>
