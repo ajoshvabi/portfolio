@@ -415,10 +415,10 @@ export const Portfolio = () => {
 
                             <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
                             </Fade>
-                            <Fade direction="right" duration={1000} delay={300} triggerOnce={true}>
+                            <Fade direction="right" duration={1000} triggerOnce={true}>
                             <h4>Full-Stack Developer</h4>
                             </Fade>
-                            <Fade direction="right" duration={1000} delay={350} triggerOnce={true}>
+                            <Fade direction="right" duration={1000} triggerOnce={true}>
                                 
                             <p className="mt-3" >
                                 I'm passionate developer who works with the Flutter and MERN stack,
@@ -820,7 +820,7 @@ export const Portfolio = () => {
                     </Fade>
                     </Col>
                     <Col lg >
-                    <Fade direction="right" duration={1500} delay={300} triggerOnce={true} >
+                    <Fade direction="right" duration={1500} triggerOnce={true} >
 
                         <Row>
                             <Col lg={3} className="px-3 py-3 contactiocn">
