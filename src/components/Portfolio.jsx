@@ -134,13 +134,13 @@ export const Portfolio = () => {
                 <Row className="h-100">
                     <Col md={6} className=" d-flex align-items-center justify-content-center ">
                         <div className="text-lg-start text-center">
-                            <Fade direction="down" duration={1500} >
+                            <Fade direction="down" duration={1500} triggerOnce={true}>
                                 <div className="word mt-lg-0 mt-5 "><h2 className=" welcomtext ">{part}</h2></div>
                             </Fade>
-                            <Slide duration={1500}>
+                            <Slide duration={1500} triggerOnce={true}>
                                 <p className="abtme">Hello! I'm <b>Ajosh V Abi</b>, a developer based in India.</p>
                             </Slide>
-                            <Fade direction="up" duration={1500} >
+                            <Fade direction="up" duration={1500} triggerOnce={true}>
                                 <Row className="mt-3 d-flex justify-content-lg-start justify-content-center">
                                     {theme
                                         ?
