@@ -1,9 +1,8 @@
 /* .navbg{
     background-image: url(../assets/bg2.jpg);
-}
-body{
-    background-image: url(../assets/bg2.jpg);
 } */
+body{
+overflow-x: hidden;}
 
 .lightTheme{
     --bg:#ffffff;

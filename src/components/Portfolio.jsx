@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Bounce, Fade, Slide,Rotate } from "react-awesome-reveal";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import cv from '../assets/Ajosh_V_Abi_.pdf';
 import abtimg from '../assets/about.jpg';
@@ -133,89 +134,98 @@ export const Portfolio = () => {
                 <Row className="h-100">
                     <Col md={6} className=" d-flex align-items-center justify-content-center ">
                         <div className="text-lg-start text-center">
-                            <div className="word mt-lg-0 mt-5 "><h2 className=" welcomtext ">{part}</h2></div>
-                            <p className="abtme">Hello! I'm <b>Ajosh V Abi</b>, a developer based in India.</p>
-                            <Row className="mt-3 d-flex justify-content-lg-start justify-content-center">
-                                {theme
-                                    ?
-                                    <>
-                                        <Col xs={2} className="icon">
-                                            <a href="https://github.com/ajoshvabi" target="_blank">
+                            <Fade direction="down" duration={1500} >
+                                <div className="word mt-lg-0 mt-5 "><h2 className=" welcomtext ">{part}</h2></div>
+                            </Fade>
+                            <Slide duration={1500}>
+                                <p className="abtme">Hello! I'm <b>Ajosh V Abi</b>, a developer based in India.</p>
+                            </Slide>
+                            <Fade direction="up" duration={1500} >
+                                <Row className="mt-3 d-flex justify-content-lg-start justify-content-center">
+                                    {theme
+                                        ?
+                                        <>
+                                            <Col xs={2} className="icon">
+                                                <a href="https://github.com/ajoshvabi" target="_blank">
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 496 512">
-                                                    <path fill="#E3E3E3" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 496 512">
+                                                        <path fill="#E3E3E3" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
 
-                                        <Col xs={2} className="icon">
-                                            <a href="https://www.linkedin.com/in/ajosh-v-abi/" target="_blank">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
-                                                    <path fill="#E3E3E3" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
-                                        {/* <Col xs={2} className="icon">
+                                            <Col xs={2} className="icon">
+                                                <a href="https://www.linkedin.com/in/ajosh-v-abi/" target="_blank">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                                                        <path fill="#E3E3E3" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
+                                            {/* <Col xs={2} className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
                                                 <path fill="#E3E3E3" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                                             </svg>
                                         </Col> */}
-                                        <Col xs={2} className="icon">
-                                            <a href="mailto:ajoajoshvabi17@gmail.com">
+                                            <Col xs={2} className="icon">
+                                                <a href="mailto:ajoajoshvabi17@gmail.com">
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
-                                                    <path fill="#E3E3E3" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
-                                    </>
-                                    :
-                                    <>
-                                        <Col xs={2} className="icon">
-                                            <a href="https://github.com/ajoshvabi" target="_blank">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 496 512">
-                                                    <path fill="#1C1E21" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
-                                        <Col xs={2} className="icon">
-                                            <a href="https://www.linkedin.com/in/ajosh-v-abi/" target="_blank">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
-                                                    <path fill="#000000" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
-                                        {/* <Col xs={2} className="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                                                        <path fill="#E3E3E3" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
+                                        </>
+                                        :
+                                        <>
+                                            <Col xs={2} className="icon">
+                                                <a href="https://github.com/ajoshvabi" target="_blank">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 496 512">
+                                                        <path fill="#1C1E21" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} className="icon">
+                                                <a href="https://www.linkedin.com/in/ajosh-v-abi/" target="_blank">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                                                        <path fill="#000000" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
+                                            {/* <Col xs={2} className="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
                                                 <path fill="#000000" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                                             </svg>
                                         </Col> */}
-                                        <Col xs={2} className="icon">
-                                            <a href="mailto:ajoajoshvabi17@gmail.com">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
-                                                    <path fill="#000000" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-                                                </svg>
-                                            </a>
-                                        </Col>
-                                    </>
-                                }
+                                            <Col xs={2} className="icon">
+                                                <a href="mailto:ajoajoshvabi17@gmail.com">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                                                        <path fill="#000000" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                                                    </svg>
+                                                </a>
+                                            </Col>
+                                        </>
+                                    }
 
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <a href={cv} target="_blank">
-                                        <button class="btn-23 mt-4">
-                                            <span class="text ">Download cv</span>
-                                            <span aria-hidden="" class="marquee">View cv</span>
-                                        </button>
-                                    </a>
-                                </Col>
-                            </Row>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <a href={cv} target="_blank">
+                                            <button class="btn-23 mt-4">
+                                                <span class="text ">Download cv</span>
+                                                <span aria-hidden="" class="marquee">View cv</span>
+                                            </button>
+                                        </a>
+                                    </Col>
+                                </Row>
+                            </Fade>
                         </div>
-                    </Col>
 
+
+                    </Col>
                     <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0">
-                        <img src={bgimg} alt="" className="img-fluid image-with-shadow" />
+                        <Bounce direction="up" duration={2000} triggerOnce={true} >
+                            <img src={bgimg} alt="" className="img-fluid image-with-shadow" />
+                        </Bounce>
                     </Col>
                 </Row>
             </Container>
@@ -226,98 +236,166 @@ export const Portfolio = () => {
                 </div>
                 <Row className="mx-auto ">
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Html</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Css</p>
+
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Js</p>
+
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="" /><br />
+                        </Fade>
                         <p>Flutter</p>
+
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="" /><br />
+                        </Fade>
                         <p>Dart</p>
+
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" className="img-fluid" /><br />
+                        <Fade direction="up" duration={1000}>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" className="img-fluid" /><br />
+                        </Fade>
                         <p>React.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Node.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://skillicons.dev/icons?i=express" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://skillicons.dev/icons?i=express" alt="" /><br />
+                        </Fade>
                         <p>Express.js</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" /><br />
+                        </Fade>
                         <p>MongoDb</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.simpleicons.org/redux/764ABC" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.simpleicons.org/redux/764ABC" alt="" /><br />
+                        </Fade>
                         <p>Redux</p>
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="" /><br />
+                        </Fade>
                         <p>Firebase</p>
                     </Col>
+
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Git</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://skillicons.dev/icons?i=github" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://skillicons.dev/icons?i=github" alt="" /><br />
+                        </Fade>
                         <p>GitHub</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" /><br />
+                        </Fade>
                         <p>Bootstrap</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://react-bootstrap.netlify.app/img/logo.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://react-bootstrap.netlify.app/img/logo.svg" alt="" /><br />
+                        </Fade>
                         <p> React Bootstrap</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://jwt.io/img/pic_logo.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://jwt.io/img/pic_logo.svg" alt="" /><br />
+                        </Fade>
                         <p>JWT</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img className=" rounded-3 " src="data:image/png;base64,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" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img className=" rounded-3 " src="data:image/png;base64,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" alt="" /><br />
+                        </Fade>
                         <p>Socket.IO</p>
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.simpleicons.org/php/777BB4" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.simpleicons.org/php/777BB4" alt="" /><br />
+                        </Fade>
                         <p>Php</p>
                     </Col>
 
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" /><br />
+                        </Fade>
                         <p>MySql</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="" /><br />
+                        </Fade>
                         <p>Codeigniter</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="" /><br />
+                        </Fade>
                         <p>npm</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
-                        <img src="	https://cdn.simpleicons.org/postman/FF6C37" alt="" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src="	https://cdn.simpleicons.org/postman/FF6C37" alt="" /><br />
+                        </Fade>
                         <p>Postman</p>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-5 text-center ">
-                        <img src={api} alt="" className="rounded-5" /><br />
+                        <Fade direction="up" duration={1000}>
+
+                            <img src={api} alt="" className="rounded-5" /><br />
+                        </Fade>
                         <p>API</p>
                     </Col>
                 </Row>
@@ -327,12 +405,21 @@ export const Portfolio = () => {
             <Container id="about" className="aboutcontainer ms-lg-5 my-3 my-lg-0 ">
                 <Row>
                     <Col md className=" d-none d-lg-block  ">
+                    <Fade duration={1500} triggerOnce={true} className="mx-5">
                         <img src={abtimg} alt="" className="mx-5 about" />
+                    </Fade>
                     </Col>
                     <Col md className="">
                         <div className="py-lg-4 ">
+                            <Fade direction="right" duration={1000}>
+
                             <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
+                            </Fade>
+                            <Fade direction="right" duration={1000} delay={300}>
                             <h4>Full-Stack Developer</h4>
+                            </Fade>
+                            <Fade direction="right" duration={1000} delay={350}>
+                                
                             <p className="mt-3" >
                                 I'm passionate developer who works with the Flutter and MERN stack,
                                 which involves using Flutter, Firebase, MongoDB, Express.js, React.js, and Node.js. I'm
@@ -340,6 +427,7 @@ export const Portfolio = () => {
                                 I really enjoy making websites and mobile apps look great and user-friendly.
                                 I'm always learning and excited to be part of a development team.
                             </p>
+                            </Fade>
                         </div>
                     </Col>
                 </Row>
@@ -351,8 +439,11 @@ export const Portfolio = () => {
             <Container className="projectcontainer  text-lg-start text-center">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>PORTFOLIO</h5>
+                    <Fade duration={1500}>
                     <h3 >Each project is a unique piece of development 🧩</h3>
+                    </Fade>
                 </div>
+                <Fade duration={1000}>
 
                 <Row className=" d-flex justify-content-center py-4 ">
                     <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
@@ -362,21 +453,23 @@ export const Portfolio = () => {
                         <label className="mx-auto py-2 fw-bolder pointer">Mobile Apps</label>
                     </Col>
                 </Row>
+                </Fade>
                 {!category ?
 
 
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
+                        <Fade direction="right" duration={1500} triggerOnce={true}>
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
-                    <Col md className="d-flex justify-content-center  align-items-center py-3">
-                        <div className="jobportal mx-1">
-                            <video controls poster={jobimg} className=" img-fluid ">
-                                <source src={jobvideo} type="video/mp4"  />
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </Col>
-                    <Col md className=" d-flex justify-content-center  align-items-center ">
+                            <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                <div className="jobportal mx-1">
+                                    <video controls poster={jobimg} className=" img-fluid ">
+                                        <source src={jobvideo} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </Col>
+                            <Col md className=" d-flex justify-content-center  align-items-center ">
                                 <div>
                                     <h5><b >Job Portal</b></h5>
                                     <p>
@@ -423,7 +516,8 @@ export const Portfolio = () => {
                                 </div>
                             </Col>
                         </Row>
-
+                        </Fade>
+                        <Fade direction="left" duration={1500} triggerOnce={true}>
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
                                 <div className="insure mx-1"></div>
@@ -481,8 +575,10 @@ export const Portfolio = () => {
                                 <div className="insure mx-auto"></div>
                             </Col>
                         </Row>
+                        </Fade>
 
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
+                        <Fade direction="right" duration={1500} triggerOnce={true}>
 
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-flex justify-content-center  align-items-center py-3" >
@@ -530,6 +626,8 @@ export const Portfolio = () => {
                                 </div>
                             </Col>
                         </Row>
+                        </Fade>
+                        <Fade direction="left" duration={1500} triggerOnce={true}>
 
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
@@ -580,11 +678,14 @@ export const Portfolio = () => {
                                 <div className="eplan mx-auto "></div>
                             </Col>
                         </Row>
+                        </Fade>
 
                     </>
                     :
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
+                        <Fade direction="left" duration={1500} triggerOnce={true}>
+
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
                             <Col md className="d-flex justify-content-center  align-items-center py-3">
                                 <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
@@ -631,6 +732,9 @@ export const Portfolio = () => {
                                 </div>
                             </Col>
                         </Row>
+                        </Fade>
+
+                        <Fade direction="right" duration={1500} triggerOnce={true} >
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
                             <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
                                 <img src={amazon1} className="img-fluidd addressbuk" alt="" />
@@ -676,10 +780,6 @@ export const Portfolio = () => {
                                     </Row>
                                 </div>
                             </Col>
-                            {/* <Col md className="d-flex justify-content-center  align-items-center py-3 d-none d-md-block">
-                                <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
-                                <img src={addressbuk} className="img-fluidd addressbuk" alt="" />
-                            </Col> */}
                             <Col className="d-none d-md-block">
                                 <Row>
                                     <Col md >
@@ -691,6 +791,7 @@ export const Portfolio = () => {
                                 </Row></Col>
 
                         </Row>
+                        </Fade>
 
                     </>}
             </Container>
@@ -700,10 +801,13 @@ export const Portfolio = () => {
             <Container id="contact" className="text-lg-start text-center my-3 mt-5 contactcontainer">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>CONTACT</h5>
+                    <Fade duration={1500}>
                     <h3>Don't be shy! Hit me up! 👇</h3>
+                    </Fade>
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
+                    <Fade direction="right" duration={1500} >
                         <Row className="bg-info1">
                             <Col lg={3} className="py-3 px-3 contactiocn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
@@ -713,8 +817,11 @@ export const Portfolio = () => {
                                 <p className="contactcontent">Kerala,India</p>
                             </Col>
                         </Row>
+                    </Fade>
                     </Col>
                     <Col lg >
+                    <Fade direction="right" duration={1500} delay={300} >
+
                         <Row>
                             <Col lg={3} className="px-3 py-3 contactiocn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg>                            </Col>
@@ -723,6 +830,8 @@ export const Portfolio = () => {
                                 <a href="mailto:ajoajoshvabi17@gmail.com" target="_blank" className=" text-decoration-none "><p className=" contactcontent">ajoajoshvabi17@gmail.com</p></a>
                             </Col>
                         </Row>
+                        </Fade>
+
                     </Col>
                     <Col></Col>
                     <Col></Col>
