@@ -80,12 +80,49 @@ overflow-x: hidden;}
     box-shadow: 5px 6px 10px 4px var(--imgshadow);
     transition: ease 0.5s;
 }
+
+
+/* @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  25%, 75% {
+    transform: translateY(-10px);
+  }
+}
+
+
 .image-with-shadow {
   filter: drop-shadow(8px 10px 10px var(--bgshadow));
   transition: ease-in-out 0.5s;
+  animation: bounce 2s infinite;
+  /* animation-delay: 3s; */
 }
 .image-with-shadow:hover {
-  /* filter: drop-shadow(8px 10px 10px rgba(0, 0, 0, 0.589)); */
   scale: 1.05;
 }
 

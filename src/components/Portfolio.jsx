@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Bounce, Fade, Slide,Rotate } from "react-awesome-reveal";
+import { Bounce, Fade, Slide } from "react-awesome-reveal";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import cv from '../assets/Ajosh_V_Abi_.pdf';
 import abtimg from '../assets/about.jpg';
@@ -134,13 +134,13 @@ export const Portfolio = () => {
                 <Row className="h-100">
                     <Col md={6} className=" d-flex align-items-center justify-content-center ">
                         <div className="text-lg-start text-center">
-                            <Fade direction="down" duration={1500} triggerOnce={true}>
+                            <Fade direction="down" duration={1000} triggerOnce={true}>
                                 <div className="word mt-lg-0 mt-5 "><h2 className=" welcomtext ">{part}</h2></div>
                             </Fade>
-                            <Slide duration={1500} triggerOnce={true}>
+                            <Slide duration={1000} triggerOnce={true}>
                                 <p className="abtme">Hello! I'm <b>Ajosh V Abi</b>, a developer based in India.</p>
                             </Slide>
-                            <Fade direction="up" duration={1500} triggerOnce={true}>
+                            <Fade direction="up" duration={1000} triggerOnce={true}>
                                 <Row className="mt-3 d-flex justify-content-lg-start justify-content-center">
                                     {theme
                                         ?
@@ -405,7 +405,7 @@ export const Portfolio = () => {
             <Container id="about" className="aboutcontainer ms-lg-5 my-3 my-lg-0 ">
                 <Row>
                     <Col md className=" d-none d-lg-block  ">
-                    <Fade duration={1500} triggerOnce={true} className="mx-5">
+                    <Fade duration={1000} triggerOnce={true} className="mx-5">
                         <img src={abtimg} alt="" className="mx-5 about" />
                     </Fade>
                     </Col>
@@ -439,11 +439,11 @@ export const Portfolio = () => {
             <Container className="projectcontainer  text-lg-start text-center">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>PORTFOLIO</h5>
-                    <Fade duration={1500} triggerOnce={true}>
+                    <Fade duration={1000} triggerOnce={true}>
                     <h3 >Each project is a unique piece of development 🧩</h3>
                     </Fade>
                 </div>
-                <Fade duration={1500} triggerOnce={true}>
+                <Fade duration={1000} triggerOnce={true}>
 
                 <Row className=" d-flex justify-content-center py-4 ">
                     <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
@@ -459,7 +459,7 @@ export const Portfolio = () => {
 
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
-                        <Fade direction="right" duration={1500} triggerOnce={true}>
+                        <Fade direction="right" duration={1000} triggerOnce={true}>
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
                             <Col md className="d-flex justify-content-center  align-items-center py-3">
                                 <div className="jobportal mx-1">
@@ -517,7 +517,7 @@ export const Portfolio = () => {
                             </Col>
                         </Row>
                         </Fade>
-                        <Fade direction="left" duration={1500} triggerOnce={true}>
+                        <Fade direction="left" duration={1000} triggerOnce={true}>
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
                                 <div className="insure mx-1"></div>
@@ -578,7 +578,7 @@ export const Portfolio = () => {
                         </Fade>
 
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
-                        <Fade direction="right" duration={1500} triggerOnce={true}>
+                        <Fade direction="right" duration={1000} triggerOnce={true}>
 
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-flex justify-content-center  align-items-center py-3" >
@@ -627,7 +627,7 @@ export const Portfolio = () => {
                             </Col>
                         </Row>
                         </Fade>
-                        <Fade direction="left" duration={1500} triggerOnce={true}>
+                        <Fade direction="left" duration={1000} triggerOnce={true}>
 
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                             <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
@@ -684,7 +684,7 @@ export const Portfolio = () => {
                     :
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
-                        <Fade direction="left" duration={1500} triggerOnce={true}>
+                        <Fade direction="left" duration={1000} triggerOnce={true}>
 
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
                             <Col md className="d-flex justify-content-center  align-items-center py-3">
@@ -734,7 +734,7 @@ export const Portfolio = () => {
                         </Row>
                         </Fade>
 
-                        <Fade direction="right" duration={1500} triggerOnce={true} >
+                        <Fade direction="right" duration={1000} triggerOnce={true} >
                         <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
                             <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
                                 <img src={amazon1} className="img-fluidd addressbuk" alt="" />
@@ -801,13 +801,13 @@ export const Portfolio = () => {
             <Container id="contact" className="text-lg-start text-center my-3 mt-5 contactcontainer">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>CONTACT</h5>
-                    <Fade duration={1500} triggerOnce={true}>
+                    <Fade duration={1000} triggerOnce={true}>
                     <h3>Don't be shy! Hit me up! 👇</h3>
                     </Fade>
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
-                    <Fade direction="right" duration={1500} triggerOnce={true} >
+                    <Fade direction="right" duration={1000} triggerOnce={true} >
                         <Row className="bg-info1">
                             <Col lg={3} className="py-3 px-3 contactiocn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
@@ -820,7 +820,7 @@ export const Portfolio = () => {
                     </Fade>
                     </Col>
                     <Col lg >
-                    <Fade direction="right" duration={1500} triggerOnce={true} >
+                    <Fade direction="right" duration={1000} triggerOnce={true} >
 
                         <Row>
                             <Col lg={3} className="px-3 py-3 contactiocn">
