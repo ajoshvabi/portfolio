@@ -411,14 +411,14 @@ export const Portfolio = () => {
                     </Col>
                     <Col md className="">
                         <div className="py-lg-4 ">
-                            <Fade direction="right" duration={1000}>
+                            <Fade direction="right" duration={1000} triggerOnce={true}>
 
                             <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
                             </Fade>
-                            <Fade direction="right" duration={1000} delay={300}>
+                            <Fade direction="right" duration={1000} delay={300} triggerOnce={true}>
                             <h4>Full-Stack Developer</h4>
                             </Fade>
-                            <Fade direction="right" duration={1000} delay={350}>
+                            <Fade direction="right" duration={1000} delay={350} triggerOnce={true}>
                                 
                             <p className="mt-3" >
                                 I'm passionate developer who works with the Flutter and MERN stack,
@@ -439,11 +439,11 @@ export const Portfolio = () => {
             <Container className="projectcontainer  text-lg-start text-center">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>PORTFOLIO</h5>
-                    <Fade duration={1500}>
+                    <Fade duration={1500} triggerOnce={true}>
                     <h3 >Each project is a unique piece of development 🧩</h3>
                     </Fade>
                 </div>
-                <Fade duration={1000}>
+                <Fade duration={1500} triggerOnce={true}>
 
                 <Row className=" d-flex justify-content-center py-4 ">
                     <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
@@ -801,13 +801,13 @@ export const Portfolio = () => {
             <Container id="contact" className="text-lg-start text-center my-3 mt-5 contactcontainer">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>CONTACT</h5>
-                    <Fade duration={1500}>
+                    <Fade duration={1500} triggerOnce={true}>
                     <h3>Don't be shy! Hit me up! 👇</h3>
                     </Fade>
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
-                    <Fade direction="right" duration={1500} >
+                    <Fade direction="right" duration={1500} triggerOnce={true} >
                         <Row className="bg-info1">
                             <Col lg={3} className="py-3 px-3 contactiocn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
@@ -820,7 +820,7 @@ export const Portfolio = () => {
                     </Fade>
                     </Col>
                     <Col lg >
-                    <Fade direction="right" duration={1500} delay={300} >
+                    <Fade direction="right" duration={1500} delay={300} triggerOnce={true} >
 
                         <Row>
                             <Col lg={3} className="px-3 py-3 contactiocn">
