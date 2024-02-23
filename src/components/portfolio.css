@@ -25,7 +25,7 @@ body{
     background-color: #1B1B1D;
     --textcolor:#E3E3E3;
     --projectborder:#e3e3e32d;
-    --bgshadow:rgba(168, 168, 168, 0.396);
+    --bgshadow:rgba(73, 73, 73, 0.484);
 
 
 
@@ -449,7 +449,7 @@ body{
 
 .jobportal {
   width: 28rem;
-  /* height: 15rem; */
+  height: 15rem;
   border-color: rgba(75, 216, 226, 0.849);
   /* border-radius: 5%;
   background: url('../assets/jobportal.jpeg');
@@ -457,7 +457,9 @@ body{
   background-position: center;
   transition: ease-out 3s; */
 }
-
+.addressbuk{
+  height: 22rem;
+}
 
 
 
@@ -572,31 +574,17 @@ body{
   align-items: center;
   padding: 0.3em 0.3em 0.3em 0.3em;
 }
-/* 
-.cssbuttons-io::before,
-.cssbuttons-io::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.categoryactive{
+  color: var(--textcolor);
+  /* background-color: #dde5ffcb; */
+  background-color: rgb(20, 126, 251);
 }
+.categorynonactive{
+  border: 1px solid;
+  border-color:  var(--textcolor);
 
-.cssbuttons-io::before {
-  content: "";
-  background: #000;
-  width: 120%;
-  left: -10%;
-  transform: skew(30deg);
-  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-} */
+}
+.pointer{
+  cursor: pointer;
 
-/* .cssbuttons-io:hover::before {
-  transform: translate3d(100%, 0, 0);
-} */
-
-/* .cssbuttons-io:active {
-  transform: scale(0.95);
-} */
-
+}
