@@ -243,7 +243,7 @@ export const Portfolio = () => {
                     </Col>
                     <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0">
                         <Fade direction="up" duration={1000} when={true} cascade>
-                            <img src={bgimg} alt="" className="img-fluid image-with-shadow animate__animated animate__pulse animate__delay-1s animate__slow animate__infinite" />
+                            <img src={bgimg} alt="" className="img-fluid image-with-shadow " />
                         </Fade>
                     </Col>
                 </Row>
