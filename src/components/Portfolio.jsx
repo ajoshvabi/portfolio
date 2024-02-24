@@ -242,9 +242,9 @@ export const Portfolio = () => {
 
                     </Col>
                     <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0">
-                        <Bounce direction="up" duration={2000} triggerOnce={true} >
+                        <Fade direction="up" duration={2000} triggerOnce={true} >
                             <img src={bgimg} alt="" className="img-fluid image-with-shadow" />
-                        </Bounce>
+                        </Fade>
                     </Col>
                 </Row>
             </Container>
