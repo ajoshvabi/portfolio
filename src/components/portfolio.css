@@ -82,7 +82,7 @@ overflow-x: hidden;}
 }
 
 
-/* @keyframes bounce {
+@keyframes bounce {
   0% {
     transform: translateY(0);
   }
@@ -101,9 +101,9 @@ overflow-x: hidden;}
   100% {
     transform: translateY(0);
   }
-} */
+}
 
-@keyframes bounce {
+/* @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
@@ -113,7 +113,7 @@ overflow-x: hidden;}
   25%, 75% {
     transform: translateY(-10px);
   }
-}
+} */
 
 
 .image-with-shadow {
