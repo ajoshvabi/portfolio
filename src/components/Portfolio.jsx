@@ -16,17 +16,16 @@ import "./portfolio.css";
 export const Portfolio = () => {
     const [theme, settheme] = useState(false)
     const [category, setCategory] = useState(false)
+    const [scrolled, setScrolled] = useState(false);
+
     const changecategory = () => {
         setCategory(!category)
     }
-
-
     useEffect(() => {
         console.log(theme);
         document.body.className = theme ? 'darkTheme' : 'lightTheme';
         // 
     }, [theme, category])
-
     const words = [
         'Hi i am Ajosh',
         'Flutter Developer',
@@ -35,10 +34,8 @@ export const Portfolio = () => {
         'Back-end Developer',
         'Mobile App Developer',
     ];
-
     const [part, setPart] = useState('');
     let i = 0;
-
     let offset = 0;
     const len = words.length;
     let forwards = true;
@@ -80,12 +77,34 @@ export const Portfolio = () => {
     }, [i, offset, forwards, skip_count]);
 
     const handleNavLinkClick = () => {
-        // Close the navbar when a link is clicked (for mobile screens)
         const navbarToggler = document.querySelector('.navbar-toggler');
         if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
             navbarToggler.click();
         }
     };
+
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 200) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
             {/* navbar */}
@@ -405,28 +424,28 @@ export const Portfolio = () => {
             <Container id="about" className="aboutcontainer ms-lg-5 my-3 my-lg-0 ">
                 <Row>
                     <Col md className=" d-none d-lg-block  ">
-                    <Fade duration={1000} triggerOnce={true} className="mx-5">
-                        <img src={abtimg} alt="" className="mx-5 about" />
-                    </Fade>
+                        <Fade duration={1000} triggerOnce={true} className="mx-5">
+                            <img src={abtimg} alt="" className="mx-5 about" />
+                        </Fade>
                     </Col>
                     <Col md className="">
                         <div className="py-lg-4 ">
                             <Fade direction="right" duration={1000} triggerOnce={true}>
 
-                            <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
+                                <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
                             </Fade>
                             <Fade direction="right" duration={1000} triggerOnce={true}>
-                            <h4>Full-Stack Developer</h4>
+                                <h4>Full-Stack Developer</h4>
                             </Fade>
                             <Fade direction="right" duration={1000} triggerOnce={true}>
-                                
-                            <p className="mt-3" >
-                                I'm passionate developer who works with the Flutter and MERN stack,
-                                which involves using Flutter, Firebase, MongoDB, Express.js, React.js, and Node.js. I'm
-                                skilled in both creating the visual part of websites and the behind-thescenes coding.
-                                I really enjoy making websites and mobile apps look great and user-friendly.
-                                I'm always learning and excited to be part of a development team.
-                            </p>
+
+                                <p className="mt-3" >
+                                    I'm passionate developer who works with the Flutter and MERN stack,
+                                    which involves using Flutter, Firebase, MongoDB, Express.js, React.js, and Node.js. I'm
+                                    skilled in both creating the visual part of websites and the behind-thescenes coding.
+                                    I really enjoy making websites and mobile apps look great and user-friendly.
+                                    I'm always learning and excited to be part of a development team.
+                                </p>
                             </Fade>
                         </div>
                     </Col>
@@ -440,19 +459,19 @@ export const Portfolio = () => {
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>PORTFOLIO</h5>
                     <Fade duration={1000} triggerOnce={true}>
-                    <h3 >Each project is a unique piece of development 🧩</h3>
+                        <h3 >Each project is a unique piece of development 🧩</h3>
                     </Fade>
                 </div>
                 <Fade duration={1000} triggerOnce={true}>
 
-                <Row className=" d-flex justify-content-center py-4 ">
-                    <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
-                        <label className="mx-auto py-2 fw-bolder pointer">Web Applications</label>
-                    </Col>
-                    <Col xs={5} className={`${category ? 'categoryactive text-white ' : 'categorynonactive'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={!category ? changecategory : undefined}>
-                        <label className="mx-auto py-2 fw-bolder pointer">Mobile Apps</label>
-                    </Col>
-                </Row>
+                    <Row className=" d-flex justify-content-center py-4 ">
+                        <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
+                            <label className="mx-auto py-2 fw-bolder pointer">Web Applications</label>
+                        </Col>
+                        <Col xs={5} className={`${category ? 'categoryactive text-white ' : 'categorynonactive'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={!category ? changecategory : undefined}>
+                            <label className="mx-auto py-2 fw-bolder pointer">Mobile Apps</label>
+                        </Col>
+                    </Row>
                 </Fade>
                 {!category ?
 
@@ -460,224 +479,224 @@ export const Portfolio = () => {
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
                         <Fade direction="right" duration={1000} triggerOnce={true}>
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
-                            <Col md className="d-flex justify-content-center  align-items-center py-3">
-                                <div className="jobportal mx-1">
-                                    <video controls poster={jobimg} className=" img-fluid ">
-                                        <source src={jobvideo} type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                            </Col>
-                            <Col md className=" d-flex justify-content-center  align-items-center ">
-                                <div>
-                                    <h5><b >Job Portal</b></h5>
-                                    <p>
-                                        This is a user-friendly job portal for easy job searches and applications. HR professionals can
-                                        effortlessly post listings, review profiles, and make hires. The project highlights my web
-                                        development skills, incorporating libraries for improved design and functionality.
-                                    </p>
-                                    <Row className=" mx-auto   ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                        </Col>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                    <div className="jobportal mx-1">
+                                        <video controls poster={jobimg} className=" img-fluid ">
+                                            <source src={jobvideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </Col>
+                                <Col md className=" d-flex justify-content-center  align-items-center ">
+                                    <div>
+                                        <h5><b >Job Portal</b></h5>
+                                        <p>
+                                            This is a user-friendly job portal for easy job searches and applications. HR professionals can
+                                            effortlessly post listings, review profiles, and make hires. The project highlights my web
+                                            development skills, incorporating libraries for improved design and functionality.
+                                        </p>
+                                        <Row className=" mx-auto   ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
 
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://skillicons.dev/icons?i=express" className=" stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="mx-2 px-3 ">
-                                            <img src="https://react-bootstrap.netlify.app/img/logo.svg" className="stackicon" alt="" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="py-3">
-                                        <Col>
-                                            <a href="https://github.com/ajoshvabi/jobapp" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                        </Row>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://skillicons.dev/icons?i=express" className=" stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-3 ">
+                                                <img src="https://react-bootstrap.netlify.app/img/logo.svg" className="stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/jobapp" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                            </Row>
                         </Fade>
                         <Fade direction="left" duration={1000} triggerOnce={true}>
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                            <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
-                                <div className="insure mx-1"></div>
-                            </Col>
-                            <Col md className="d-flex justify-content-center  align-items-center   px-md-5">
-                                <div>
-                                    <h5><b >Insure</b></h5>
-                                    <p>
-                                        Insure is a React-based UI project designed to showcase frontend skills. With its modern
-                                        design and user-friendly approach, Insure offers a seamless and engaging experience for users
-                                        exploring insurance details.
-                                    </p>
-                                    <Row className="mx-auto">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="py-3">
-                                        <Col xs={6} lg={3} className=" d-flex justify-content-end " >
-                                            <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="16" width="16">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                        <Col xs={6} lg={3} className="d-flex justify-content-start" >
-                                            <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                                        </svg>
-                                                        Demo
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                            <Col md className="d-none d-md-block d-flex justify-content-center  align-items-center">
-                                <div className="insure mx-auto"></div>
-                            </Col>
-                        </Row>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
+                                    <div className="insure mx-1"></div>
+                                </Col>
+                                <Col md className="d-flex justify-content-center  align-items-center   px-md-5">
+                                    <div>
+                                        <h5><b >Insure</b></h5>
+                                        <p>
+                                            Insure is a React-based UI project designed to showcase frontend skills. With its modern
+                                            design and user-friendly approach, Insure offers a seamless and engaging experience for users
+                                            exploring insurance details.
+                                        </p>
+                                        <Row className="mx-auto">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3">
+                                            <Col xs={6} lg={3} className=" d-flex justify-content-end " >
+                                                <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="16" width="16">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                            <Col xs={6} lg={3} className="d-flex justify-content-start" >
+                                                <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                                            </svg>
+                                                            Demo
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col md className="d-none d-md-block d-flex justify-content-center  align-items-center">
+                                    <div className="insure mx-auto"></div>
+                                </Col>
+                            </Row>
                         </Fade>
 
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
                         <Fade direction="right" duration={1000} triggerOnce={true}>
 
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                            <Col md className="d-flex justify-content-center  align-items-center py-3" >
-                                <div className="connectedcare mx-1"></div>
-                            </Col>
-                            <Col md className="d-flex justify-content-center  align-items-center  px-md-5">
-                                <div>
-                                    <h5><b >CONNECTED CARE</b></h5>
-                                    <p>
-                                        This project is about connect multiple hospital under a common network
-                                        and enable easy data transfer among hospital and shift patients etc...
-                                    </p>
-                                    <Row className="mx-auto   ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="mx-2 px-4 ">
-                                            <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="py-3 mx-auto">
-                                        <Col>
-                                            <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                        </Row>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3" >
+                                    <div className="connectedcare mx-1"></div>
+                                </Col>
+                                <Col md className="d-flex justify-content-center  align-items-center  px-md-5">
+                                    <div>
+                                        <h5><b >CONNECTED CARE</b></h5>
+                                        <p>
+                                            This project is about connect multiple hospital under a common network
+                                            and enable easy data transfer among hospital and shift patients etc...
+                                        </p>
+                                        <Row className="mx-auto   ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-4 ">
+                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3 mx-auto">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                            </Row>
                         </Fade>
                         <Fade direction="left" duration={1000} triggerOnce={true}>
 
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                            <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
-                                <div className="eplan"></div>
-                            </Col>
-                            <Col md className=" d-flex justify-content-center  align-items-center  px-md-5">
-                                <div>
-                                    <h5><b >EPLAN MAKER</b></h5>
-                                    <p>
-                                        This project is about connect multiple hospital under a common network
-                                        and enable easy data transfer among hospital and shift patients etc...
-                                    </p>
-                                    <Row className="mx-auto ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className=" stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="mx-2 px-4 ">
-                                            <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="py-3 mx-auto">
-                                        <Col>
-                                            <a href="https://github.com/ajoshvabi/eplan_maker" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                            <Col md className="d-none d-md-block ">
-                                <div className="eplan mx-auto "></div>
-                            </Col>
-                        </Row>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
+                                    <div className="eplan"></div>
+                                </Col>
+                                <Col md className=" d-flex justify-content-center  align-items-center  px-md-5">
+                                    <div>
+                                        <h5><b >EPLAN MAKER</b></h5>
+                                        <p>
+                                            This project is about connect multiple hospital under a common network
+                                            and enable easy data transfer among hospital and shift patients etc...
+                                        </p>
+                                        <Row className="mx-auto ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className=" stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-4 ">
+                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3 mx-auto">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/eplan_maker" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col md className="d-none d-md-block ">
+                                    <div className="eplan mx-auto "></div>
+                                </Col>
+                            </Row>
                         </Fade>
 
                     </>
@@ -686,111 +705,111 @@ export const Portfolio = () => {
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
                         <Fade direction="left" duration={1000} triggerOnce={true}>
 
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
-                            <Col md className="d-flex justify-content-center  align-items-center py-3">
-                                <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
-                                <img src={addressbuk} className="img-fluidd addressbuk" alt="" />
-                            </Col>
-                            <Col md className=" d-flex justify-content-center  align-items-center">
-                                <div>
-                                    <h5><b >Address Buk </b>(Live project)</h5>
-                                    <p>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                    <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
+                                    <img src={addressbuk} className="img-fluidd addressbuk" alt="" />
+                                </Col>
+                                <Col md className=" d-flex justify-content-center  align-items-center">
+                                    <div>
+                                        <h5><b >Address Buk </b>(Live project)</h5>
+                                        <p>
 
-                                        Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and
-                                        Public roles. Admins manage staff and shops; Staff update shop details. Public users
-                                        search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.
-                                    </p>
-                                    <Row className=" mx-auto   ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
-                                        </Col>
-                                    </Row>
-                                    <Row className="py-3">
-                                        <Col>
-                                            <a href="https://github.com/ajoshvabi/address_buk_ui" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                        </Row>
+                                            Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and
+                                            Public roles. Admins manage staff and shops; Staff update shop details. Public users
+                                            search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.
+                                        </p>
+                                        <Row className=" mx-auto   ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/address_buk_ui" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                            </Row>
                         </Fade>
 
                         <Fade direction="right" duration={1000} triggerOnce={true} >
-                        <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
-                            <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
-                                <img src={amazon1} className="img-fluidd addressbuk" alt="" />
-                                <img src={amazon2} className="img-fluidd addressbuk" alt="" />
-                            </Col>
-                            <Col md className=" d-flex justify-content-center  align-items-center">
-                                <div>
-                                    <h5><b >Shopping App</b></h5>
-                                    <p>Created a simple Flutter shopping app with a user-friendly interface and integrated API calls
-                                        for product data, showcasing proficiency in mobile app development,
-                                        API integration, and UI design.
-                                    </p>
-                                    <Row className=" mx-auto   ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2">
-                                            <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
-                                        </Col>
-                                        <Col xs={1} className="px-4 mx-2 ">
-                                            <img src={api} className="stackicon rounded-5" alt="" />
-                                        </Col>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
+                                    <img src={amazon1} className="img-fluidd addressbuk" alt="" />
+                                    <img src={amazon2} className="img-fluidd addressbuk" alt="" />
+                                </Col>
+                                <Col md className=" d-flex justify-content-center  align-items-center">
+                                    <div>
+                                        <h5><b >Shopping App</b></h5>
+                                        <p>Created a simple Flutter shopping app with a user-friendly interface and integrated API calls
+                                            for product data, showcasing proficiency in mobile app development,
+                                            API integration, and UI design.
+                                        </p>
+                                        <Row className=" mx-auto   ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2 ">
+                                                <img src={api} className="stackicon rounded-5" alt="" />
+                                            </Col>
 
 
-                                    </Row>
-                                    <Row className="py-3">
-                                        <Col>
-                                            <a href="https://github.com/ajoshvabi/flutter_shop_app" target="_blank">
-                                                <button className="cssbuttons-io" >
-                                                    <span>
-                                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                                            <path
-                                                                d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                        Code
-                                                    </span>
-                                                </button>
-                                            </a>
+                                        </Row>
+                                        <Row className="py-3">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/flutter_shop_app" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col className="d-none d-md-block">
+                                    <Row>
+                                        <Col md >
+                                            <img src={amazon1} className="img-fluid addressbuk" alt="" />
                                         </Col>
-                                    </Row>
-                                </div>
-                            </Col>
-                            <Col className="d-none d-md-block">
-                                <Row>
-                                    <Col md >
-                                        <img src={amazon1} className="img-fluid addressbuk" alt="" />
-                                    </Col>
-                                    <Col md >
-                                        <img src={amazon2} className="img-fluid addressbuk" alt="" />
-                                    </Col>
-                                </Row></Col>
+                                        <Col md >
+                                            <img src={amazon2} className="img-fluid addressbuk" alt="" />
+                                        </Col>
+                                    </Row></Col>
 
-                        </Row>
+                            </Row>
                         </Fade>
 
                     </>}
@@ -802,34 +821,34 @@ export const Portfolio = () => {
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
                     <h5>CONTACT</h5>
                     <Fade duration={1000} triggerOnce={true}>
-                    <h3>Don't be shy! Hit me up! 👇</h3>
+                        <h3>Don't be shy! Hit me up! 👇</h3>
                     </Fade>
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
-                    <Fade direction="right" duration={1000} triggerOnce={true} >
-                        <Row className="bg-info1">
-                            <Col lg={3} className="py-3 px-3 contactiocn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
-                            </Col>
-                            <Col lg={5}>
-                                <h6 className=" fw-bolder ">Location</h6>
-                                <p className="contactcontent">Kerala,India</p>
-                            </Col>
-                        </Row>
-                    </Fade>
+                        <Fade direction="right" duration={1000} triggerOnce={true} >
+                            <Row className="bg-info1">
+                                <Col lg={3} className="py-3 px-3 contactiocn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
+                                </Col>
+                                <Col lg={5}>
+                                    <h6 className=" fw-bolder ">Location</h6>
+                                    <p className="contactcontent">Kerala,India</p>
+                                </Col>
+                            </Row>
+                        </Fade>
                     </Col>
                     <Col lg >
-                    <Fade direction="right" duration={1000} triggerOnce={true} >
+                        <Fade direction="right" duration={1000} triggerOnce={true} >
 
-                        <Row>
-                            <Col lg={3} className="px-3 py-3 contactiocn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg>                            </Col>
-                            <Col lg={5}>
-                                <h6 className=" fw-bolder ">Mail</h6>
-                                <a href="mailto:ajoajoshvabi17@gmail.com" target="_blank" className=" text-decoration-none "><p className=" contactcontent">ajoajoshvabi17@gmail.com</p></a>
-                            </Col>
-                        </Row>
+                            <Row>
+                                <Col lg={3} className="px-3 py-3 contactiocn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg>                            </Col>
+                                <Col lg={5}>
+                                    <h6 className=" fw-bolder ">Mail</h6>
+                                    <a href="mailto:ajoajoshvabi17@gmail.com" target="_blank" className=" text-decoration-none "><p className=" contactcontent">ajoajoshvabi17@gmail.com</p></a>
+                                </Col>
+                            </Row>
                         </Fade>
 
                     </Col>
@@ -842,6 +861,15 @@ export const Portfolio = () => {
             <hr />
             <div className="projectcontainer d-flex align-items-center justify-content-center ">
                 <h5 className="my-2 py-4">Copyright © 2024. All rights are reserved</h5>
+            </div>
+            {/* scroll to top */}
+
+            <div>
+                <span >
+                    <a href="#" onClick={scrollToTop} className={`btn btn-lg ${scrolled ? `btn-primary animate__animated animate__fadeInTopRight` : `d-none`} btn-lg-square backtotop`}>
+                        <i className="fa-solid fa-arrow-up-long text-light animate__animated animate__zoomIn animate__slow animate__infinite infinite"></i>
+                    </a>
+                </span>
             </div>
         </>
     );
