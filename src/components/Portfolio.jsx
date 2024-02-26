@@ -9,6 +9,8 @@ import api from '../assets/api.png';
 import bgimg from '../assets/bgimg.png';
 import jobimg from '../assets/jobportal.jpeg';
 import jobvideo from '../assets/videojob.mp4';
+import addressbuk2 from '../assets/addressbuk.png';
+import addressbuk1 from '../assets/addressbuk2.png';
 
 import "./portfolio.css";
 export const Portfolio = () => {
@@ -703,10 +705,10 @@ export const Portfolio = () => {
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
                         <Fade direction="left" duration={1000} triggerOnce={true}>
 
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5 py-4">
                                 {/* <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                    <img src={addressbuk1} className="img-fluidd addressbuk" alt="" />
                                     <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
-                                    <img src={addressbuk} className="img-fluidd addressbuk" alt="" />
                                 </Col> */}
                                 <Col md className=" d-flex justify-content-center  align-items-center">
                                     <div>
@@ -728,7 +730,7 @@ export const Portfolio = () => {
                                                 <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
                                             </Col>
                                         </Row>
-                                        
+                                       
                                     </div>
                                 </Col>
                             </Row>
