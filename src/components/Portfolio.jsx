@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Bounce, Fade, Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import cv from '../assets/Ajosh_V_Abi_.pdf';
 import abtimg from '../assets/about.jpg';
-import addressbuk from '../assets/addressbuk.png';
-import addressbuk2 from '../assets/addressbuk2.png';
 import amazon1 from '../assets/amazon1.png';
 import amazon2 from '../assets/amazon2.png';
 import api from '../assets/api.png';
@@ -242,7 +240,7 @@ export const Portfolio = () => {
 
                     </Col>
                     <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0">
-                        <Fade direction="up" duration={1000} when={true} cascade>
+                        <Fade direction="up" duration={1000} when={true} cascade triggerOnce={true}>
                             <img src={bgimg} alt="" className="img-fluid image-with-shadow " />
                         </Fade>
                     </Col>
@@ -706,10 +704,10 @@ export const Portfolio = () => {
                         <Fade direction="left" duration={1000} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                {/* <Col md className="d-flex justify-content-center  align-items-center py-3">
                                     <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
                                     <img src={addressbuk} className="img-fluidd addressbuk" alt="" />
-                                </Col>
+                                </Col> */}
                                 <Col md className=" d-flex justify-content-center  align-items-center">
                                     <div>
                                         <h5><b >Address Buk </b>(Live project)</h5>
@@ -730,24 +728,7 @@ export const Portfolio = () => {
                                                 <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
                                             </Col>
                                         </Row>
-                                        <Row className="py-3">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/address_buk_ui" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
+                                        
                                     </div>
                                 </Col>
                             </Row>
