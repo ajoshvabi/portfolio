@@ -714,7 +714,6 @@ export const Portfolio = () => {
                                     <div>
                                         <h5><b >Address Buk </b>(Live project)</h5>
                                         <p>
-
                                             Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and
                                             Public roles. Admins manage staff and shops; Staff update shop details. Public users
                                             search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.
