@@ -9,8 +9,6 @@ import api from '../assets/api.png';
 import bgimg from '../assets/bgimg.png';
 import jobimg from '../assets/jobportal.jpeg';
 import jobvideo from '../assets/videojob.mp4';
-import addressbuk2 from '../assets/addressbuk.png';
-import addressbuk1 from '../assets/addressbuk2.png';
 
 import "./portfolio.css";
 export const Portfolio = () => {
@@ -430,14 +428,14 @@ export const Portfolio = () => {
                     </Col>
                     <Col md className="">
                         <div className="py-lg-4 ">
-                            <Fade direction="right" duration={1000} triggerOnce={true}>
+                            <Fade direction="up" duration={1000} triggerOnce={true}>
 
                                 <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
                             </Fade>
-                            <Fade direction="right" duration={1000} triggerOnce={true}>
+                            <Fade direction="up" duration={1000} triggerOnce={true}>
                                 <h4>Full-Stack Developer</h4>
                             </Fade>
-                            <Fade direction="right" duration={1000} triggerOnce={true}>
+                            <Fade direction="up" duration={1000} triggerOnce={true}>
 
                                 <p className="mt-3" >
                                     I'm passionate developer who works with the Flutter and MERN stack,
@@ -478,7 +476,8 @@ export const Portfolio = () => {
 
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
-                        <Fade direction="right" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
                                 <Col md className="d-flex justify-content-center  align-items-center py-3">
                                     <div className="jobportal mx-1">
@@ -536,7 +535,8 @@ export const Portfolio = () => {
                                 </Col>
                             </Row>
                         </Fade>
-                        <Fade direction="left" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                                 <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
                                     <div className="insure mx-1"></div>
@@ -597,7 +597,7 @@ export const Portfolio = () => {
                         </Fade>
 
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
-                        <Fade direction="right" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                                 <Col md className="d-flex justify-content-center  align-items-center py-3" >
@@ -646,7 +646,8 @@ export const Portfolio = () => {
                                 </Col>
                             </Row>
                         </Fade>
-                        <Fade direction="left" duration={1000} triggerOnce={true}>
+                        
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                                 <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
@@ -703,7 +704,7 @@ export const Portfolio = () => {
                     :
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
-                        <Fade direction="left" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5 py-4">
                                 {/* <Col md className="d-flex justify-content-center  align-items-center py-3">
@@ -733,9 +734,9 @@ export const Portfolio = () => {
                                     </div>
                                 </Col>
                             </Row>
-                        </Fade>
+                        </Fade> 
 
-                        <Fade direction="right" duration={1000} triggerOnce={true} >
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
                                 <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
                                     <img src={amazon1} className="img-fluidd addressbuk" alt="" />
@@ -808,7 +809,7 @@ export const Portfolio = () => {
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
-                        <Fade direction="right" duration={1000} triggerOnce={true} >
+                    <Fade direction="up" duration={1000} triggerOnce={true}>
                             <Row className="bg-info1">
                                 <Col lg={3} className="py-3 px-3 contactiocn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
@@ -821,7 +822,7 @@ export const Portfolio = () => {
                         </Fade>
                     </Col>
                     <Col lg >
-                        <Fade direction="right" duration={1000} triggerOnce={true} >
+                    <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <Row>
                                 <Col lg={3} className="px-3 py-3 contactiocn">
