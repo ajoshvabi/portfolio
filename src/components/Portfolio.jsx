@@ -105,7 +105,7 @@ export const Portfolio = () => {
     }, []);
     return (
         <>
-        <Fade duration={2000} triggerOnce={true}>
+        {/* <Fade duration={2000} triggerOnce={true}> */}
             {/* navbar */}
             <Navbar expand="lg" className="navbg fixed-top ">
                 <Container >
@@ -855,7 +855,7 @@ export const Portfolio = () => {
                     </a>
                 </span>
             </div>
-            </Fade>
+            {/* </Fade> */}
         </>
     );
 };
