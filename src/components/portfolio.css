@@ -119,8 +119,9 @@ overflow-x: hidden;}
 .image-with-shadow {
   filter: drop-shadow(8px 10px 10px var(--bgshadow));
   transition: ease-in-out 0.5s;
-  /* animation: bounce 2s infinite; */
-  /* animation-delay: 3s; */
+  /* height: 28rem; */
+  animation: bounce 2s infinite;
+  animation-delay: 3s;
 }
 .image-with-shadow:hover {
   scale: 1.05;
