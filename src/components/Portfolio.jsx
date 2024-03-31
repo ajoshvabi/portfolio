@@ -158,7 +158,7 @@ export const Portfolio = () => {
                     <Col md={6} className=" d-flex align-items-center justify-content-center ">
                         <div className="text-lg-start text-center">
                             <Fade direction="down" duration={1000} triggerOnce={true}>
-                                <div className="word mt-lg-0 mt-5 "><h2 className=" welcomtext ">{part}</h2></div>
+                                <div className="word mt-lg-0 "><h2 className=" welcomtext ">{part}</h2></div>
                             </Fade>
                             <Slide duration={1000} triggerOnce={true}>
                                 <p className="abtme">Hello! I'm <b>Ajosh V Abi</b>, a developer based in India.</p>
