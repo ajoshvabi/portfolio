@@ -150,6 +150,11 @@ export const Portfolio = () => {
             {/* hero start*/}
             <Container id="home" className="maincontainer mt-3 my-3 my-lg-0">
                 <Row className="h-100">
+                <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0 order-lg-2">
+                        <Fade direction="up" duration={1000} when={true} cascade triggerOnce={true}>
+                            <img src={bgimg} alt="" className="img-fluid image-with-shadow " />
+                        </Fade>
+                    </Col>
                     <Col md={6} className=" d-flex align-items-center justify-content-center ">
                         <div className="text-lg-start text-center">
                             <Fade direction="down" duration={1000} triggerOnce={true}>
@@ -240,11 +245,7 @@ export const Portfolio = () => {
 
 
                     </Col>
-                    <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0">
-                        <Fade direction="up" duration={1000} when={true} cascade triggerOnce={true}>
-                            <img src={bgimg} alt="" className="img-fluid image-with-shadow " />
-                        </Fade>
-                    </Col>
+                    
                 </Row>
             </Container>
             {/* hero end*/}
