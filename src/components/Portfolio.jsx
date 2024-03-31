@@ -155,7 +155,7 @@ export const Portfolio = () => {
                             <img src={bgimg} alt="" className="img-fluid image-with-shadow " />
                         </Fade>
                     </Col>
-                    <Col md={6} className=" d-flex align-items-center justify-content-center ">
+                    <Col md={6} className=" d-flex align-items-lg-center  justify-content-center  ">
                         <div className="text-lg-start text-center">
                             <Fade direction="down" duration={1000} triggerOnce={true}>
                                 <div className="word mt-lg-0 "><h2 className=" welcomtext ">{part}</h2></div>
