@@ -1,0 +1,43 @@
+
+var ftGUID_7970431="5708EEEB64A7E8";
+var ftConfID_7970431="0";
+var ftParams_7970431="ftOBA=1&ft_domain=www.gifgit.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https://www.gifgit.com/image/invert-image-colors;https%3A%2F%2Fwww.gifgit.com%2Fimage%2Finvert-image-colors&us_privacy=${US_PRIVACY}&site_url=https://www.gifgit.com/image/invert-image-colors&pub_id=1&sup_platform=1&cachebuster=765314.4215007144&ft_keyword=DV360CampID:__20925342426__&ft_section=DV360CampID:20925342426&ft_partnerimpid=ABAjH0i58RaVYTrlujqVmeizZCJL";
+var ftKeyword_7970431="";
+var ftCustom_7970431="";
+var ftSection_7970431="DV360CampID:20925342426";
+var ftSegment_7970431="";
+var ftSegmentList_7970431=[];
+var ftRuleMatch_7970431="0";
+var ftTimestamp_7970431="1712083386";
+var ftGeoC2_7970431="in";
+var ftGeoState_7970431="kl";
+var ftGeoCity_7970431="melila";
+var ftISP_7970431="bharat sanchar nigam limited";
+var ftSpeed_7970431="mobile";
+var ftConnType_7970431="mobile";
+var ftDMA_7970431="-1";
+var ftLong_7970431="76.83";
+var ftLat_7970431="9.01";
+var ftPostal_7970431="691557";
+var ftTimeZone_7970431="+530";
+var ftMobileCarrier_7970431="bsnl mobile";
+var ftImp7970431 = {};
+ftImp7970431.privacy = "x";
+ftImp7970431.guidAge = "228";
+ftImp7970431.impID = "1D60D9DC-C09A-344D-3162-BEF1C5EC1BD7";
+ftImp7970431.duid = "FT:5708EEEB64A7E8";
+
+ftImp7970431.ft_tpplid = "";
+ftImp7970431.ft_c = {};
+ftImp7970431.gdpr = "";
+ftImp7970431.gdpr_consent = "";
+ftImp7970431.gdpr_pd = "";
+ftImp7970431.oob_consent = "";
+ftImp7970431.gdprStoredConsent = "";
+ftImp7970431.us_privacy = "!!US_PRIVACY!";
+ftImp7970431.gpc = "";
+
+ftImp7970431.jsAppend = "1";
+var ftCreativeId_7970431 = "4628753";
+(function(){var tag=document.getElementById("ft_servedby_7970431")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m7970431";js.setAttribute("name","ftscript_m7970431");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("7970431");
+

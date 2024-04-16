@@ -7,6 +7,9 @@ import amazon1 from '../assets/amazon1.png';
 import amazon2 from '../assets/amazon2.png';
 import api from '../assets/api.png';
 import bgimg from '../assets/bgimg.png';
+import addressbuk1 from '../assets/errorbg.png';
+import jet1 from '../assets/jet1.png';
+import jet2 from '../assets/jet2.png';
 import jobimg from '../assets/jobportal.jpeg';
 import jobvideo from '../assets/videojob.mp4';
 
@@ -105,7 +108,7 @@ export const Portfolio = () => {
     }, []);
     return (
         <>
-        {/* <Fade duration={2000} triggerOnce={true}> */}
+            {/* <Fade duration={2000} triggerOnce={true}> */}
             {/* navbar */}
             <Navbar expand="lg" className="navbg fixed-top ">
                 <Container >
@@ -150,7 +153,7 @@ export const Portfolio = () => {
             {/* hero start*/}
             <Container id="home" className="maincontainer mt-3 my-3 my-lg-0">
                 <Row className="h-100">
-                <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0 order-lg-2">
+                    <Col className="d-flex  align-items-center justify-content-center px-lg-5 pb-5 pb-lg-0 order-lg-2">
                         <Fade direction="up" duration={1000} when={true} cascade triggerOnce={true}>
                             <img src={bgimg} alt="" className="img-fluid image-with-shadow mt-3 mt-lg-0 " />
                         </Fade>
@@ -245,83 +248,83 @@ export const Portfolio = () => {
 
 
                     </Col>
-                    
+
                 </Row>
             </Container>
             {/* hero end*/}
             <Container className="text-lg-start text-center my-3 mt-5 techcontainer">
-            <Fade direction="up" duration={1000} triggerOnce={true}>
-                <div className="my-4 mx-lg-5 mx-2 portfolio">
-                    <h5>TECH STACK</h5>
-                </div>
+                <Fade direction="up" duration={1000} triggerOnce={true}>
+                    <div className="my-4 mx-lg-5 mx-2 portfolio">
+                        <h5>TECH STACK</h5>
+                    </div>
                 </Fade>
                 <Row className="mx-auto ">
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" /><br />
-                        <p>Html</p>
+                            <p>Html</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" /><br />
-                        <p>Css</p>
+                            <p>Css</p>
                         </Fade>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" /><br />
-                        <p>Js</p>
+                            <p>Js</p>
                         </Fade>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="" /><br />
-                        <p>Flutter</p>
+                            <p>Flutter</p>
                         </Fade>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="" /><br />
-                        <p>Dart</p>
+                            <p>Dart</p>
                         </Fade>
 
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" className="img-fluid" /><br />
-                        <p>React.js</p>
+                            <p>React.js</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" /><br />
-                        <p>Node.js</p>
+                            <p>Node.js</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://skillicons.dev/icons?i=express" alt="" /><br />
-                        <p>Express.js</p>
+                            <p>Express.js</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" /><br />
-                        <p>MongoDb</p>
+                            <p>MongoDb</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.simpleicons.org/redux/764ABC" alt="" /><br />
-                        <p>Redux</p>
+                            <p>Redux</p>
                         </Fade>
                     </Col>
 
@@ -329,7 +332,7 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="" /><br />
-                        <p>Firebase</p>
+                            <p>Firebase</p>
                         </Fade>
                     </Col>
 
@@ -337,42 +340,42 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" /><br />
-                        <p>Git</p>
+                            <p>Git</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://skillicons.dev/icons?i=github" alt="" /><br />
-                        <p>GitHub</p>
+                            <p>GitHub</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" /><br />
-                        <p>Bootstrap</p>
+                            <p>Bootstrap</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://react-bootstrap.netlify.app/img/logo.svg" alt="" /><br />
-                        <p> React Bootstrap</p>
+                            <p> React Bootstrap</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://jwt.io/img/pic_logo.svg" alt="" /><br />
-                        <p>JWT</p>
+                            <p>JWT</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img className=" rounded-3 " src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAilBMVEUBAQH///8AAAD09PT7+/vm5ubz8/Pv7+/s7OxBQUH4+PiOjo7w8PChoaH8/PzOzs45OTnGxsbAwMDU1NSVlZXc3Nxzc3PX19cxMTGdnZ22trbi4uILCwsVFRWBgYFZWVklJSVPT09tbW2pqamGhoYoKCivr695eXlYWFhiYmJJSUkdHR1ubm42NjYMR8iSAAAOjElEQVR4nO0d2XrivK4IAlmgECAQwr5v7fu/3nEoFMlxIN4o85/oYi7mK7IU29olf3yUUEIJJZRQQgkllFBCCSWUUEIJJfw/A9zgrwkxDiCEv6bKFKS8TLan4yxg0O+n/25WB2/xH2DyulOnTRK2I7eCoOlE7e76y/tn9/J2Ck+zXc9p+BUxVBtOrzXoTP49Nhm103jeauQwxkNtfeosPv4ZFlNCj6MkKsjdD4zD9Sz+J7YxPZdB133OUhZ666/te7N4uUlHt1FTYS+Fqht6b3wdGV2dmdLeYUi883tyyJTdYO3osseg3h2d3o9FJjY33Tx1IA3jkfdWHKa3pu8YY4/BZ2M3eZ9dBNjOxk8o9puuM46G7TBs94Zjx3WbT7/Hbj55Dw4BVr2HlDaH4W52iLGdPfXmm24Y1R9/lNb0HTYRzv18i6XeTlrBqsPbYlcuT6t+K+k9UCrh4a83kZHpubkUOjNvO83Va1cu49Ox++ADdf7yKjLNMN+JKauN1zdX4RF9tz/x+u0cBVob/Z11wz7/SExUFAZTGYMk/dttksPjcP5XHMJJfLbCvafgGgAsjoHQQnfDzl8wCBC3hfwNzmrWZPqrb/GJ771+DwHOe8GJctcnHVs5/e1epFIbXy8Wp+xbC46nE+obkexit9rVDOpPphPNkF6QivkwS8NubuQgscMhsBz89vJ1x5T5tNlzlJxM2R3sFMSbrPHgHF/FIcAhu/rBqJ/KcM0+M4uMXsMhTI/8/n2GK9NrMw4jnkV3/woOmWfE28i9mQWrGKAz4jmsbuxzCLDhHZ2kY2VZhnTOayJ/ZFuYspPDr7m3poUZ4g1/WsKtVQ5hEnD71zvYPDVMH/HmUmhzDwGOTbrc8GT3VjCNwWv9lr0VGX9c2Gy3tX3rAZbcHvqBvStxokvV1i8wgtkSI3oRfUuylN0Hqv+adoX2L252cOgxba7tiO2YWoi+VbULMEEcDjjTwsbSMOV8NZviMzXVkLRkF5E7POY5ZI4avX9mXIe8xSatFpD/WFGd3zMt3ZjhROz7+swqf52kRT1cxiEJZ3wmZ6PrMwFKLmDNLn/e0PGA/88lDdhszDI4pQ68TceFbZZTyQroNPNIaDDrnvWJYb+zyZ+X1ITWCnNDCYcNg1KA83DHsUVjaZqeRGGIiTf028auIQA5oEN70RF2/UK2wlqMn6OjPjBFBxwxXt8af+xWDVJZ3V7kLAAdImiqvCRSXXdLXIgve/zF/TSR08iPLsEkwaQkhsJ4JHRgBqlwndNlf6qPVBB4xJ8xIWeY1MYqPjJ0LATr7H9of6iCgF6XsQH/HrYkxmvNVQHv6hQ9lo0A2D30DcgZCDB/XTs5AqYdbipg/2QB8PCB6sX6uQKsXaODJf5ON+ERPlNuTBvisFCiG6KBFt5AOxEY5Eq7z+PzsCBm8UqPIljgDbQjQZnguO1Jrf98BWayYbUVapHEjFBUYlCzIkEB7p70uMgXZN4U3sJvHaJggWVWy4aEgUXwuyFMBRb6CWCDpqtxrAA2SMdHJwuBEIh7d5lRVAeR6EJT41zBGVu3Fm4gc2ORlu0WlYiErk8N55S4SWPzB5RmcpgELfxD7PxGyrKdWg2BBf52SIT5EmEQmGLKCojeHDQewlLJ82FUAeBMApENiRNCQwyqyp5uYGg8TheHmD85zwAmSJA6ipqCRAobWupGgBxWhL2KZDieCFLFCBuRAGZTOtnUZiRZrgUT9OOmEnEkAuLMzfI35fLvY9lEAAA+4MUMBB4FFsVtk3lV5jxwRaYyEvSGZIlSToVMvAwVfUSByUgowIKvQ4nkvx9MkAx2FQKZJJukgiAXMWTrbJYqG7C/i4jqlwICnA7smuQv2x2TEwd9guiENIVC4p5o+WdxhOJYAdaZGu+xUsErTJCYUXApyBU0ZYZmMpmX868W/AMcbGjIO/aAtHzNWB3hXNDdpOrQwRJ59tL2KAAioWWKv4OgKHusWiYJgE6DtM8E34gGBSEnogfmon4e5WQ0AIrjSxvc2NYbmlASAJ1WtgRUywaErzuatiyNsEaXxEAijokXYYdTpPHxsKB3ZQMXgEIJJqrDMlVgV7p06pSJnJC8RgCIHmWPGaHzxM2hbR0FRBgsHu/4+S0Krvraah4mM3GHmmYyHHsUI0kGUcC3p9lZw4zrnBauykATM0oMteX8ZewL6kRWL7jmYZa1K1GaDOJkoRyDZxSO0ZMxmQoexJ9uGASWmEEZZNhSb0peXw4TbHLYS3stNBBfkHvIWJPS9NibdzW+M7t+q9xGXe3U3gd0kLEmRSYuuXF0NFWc5HZbO/rdCLBFN0nmPAAWTyrxjhuanBbDCxgoRyE5ChllRuIxcvKXYOlk2fqFngn7doIMShlFSBhUDVfAdJPtA/wFHRsU0YmaiGXiHuSHO0Vv7bx7NHbFSPcD2YhElUE1b5etPXYYuAwazXq9+gP1CzTroZF+J8KgTLKehDskjbw7jieghJVfAwnDSJXBvpXSGDOAGXT+kwxuMIMy+cV/hUFFg8TEHXwJ4E5fOQa1pehrAPY1fQYV9eBLQP0OGrBkXgHqUhT90ITReMVqWi8SOofq3oTC0iKknQGBr6/V6shgPp8fDsuDSuBHfSNUz/YjlB8jn0H1DvVms8EMudSgc8aJSiGcsqmmLJ0eofx+NGgsiT+UGFQVhnC8xzFdI/UHAA+mjar24hN/UMoggcM92NEwUQYLtLadgqNaOw9TlF+SKiWB73umpKoZnf1BOMjfwEi5Vwi2KOIqleOF6f2XNQPGKNdWRfdPfVAjxChFJJV9MRnZvqDb50UvPls6M6BwXFQux4fTg/p9enwH/h2aWjVw6pHtD/i6f3LtCDTJxdHjqTfGCKvrT0kGt6haR6nUDeHKlaCR5pxUnKWVNZlxBYNeAhRglaPidRu9SAJUtlAG5xbXKlbGHdNUHN6utnTvNpwROtlKEGwEdXXKtQEG4g1caX22C2qUHnRkjXVccTzWyeNBRyhhHANzvHBgRXoUEiwQNRpiVKzia20DY5hJpdNatpqBXGClcscrmn2Gu0oql02Yf0eUepTXp6QBSt2Ymovyn0YmRZBKrrp8RSwZO6BazQITwQE1NJSJ1Ivmtt4/+L2HhJ9ipQxT8dnytLGhGRSk9FThEpH0sGLbCywz1cufiaEp72S8Y12h0ZV4y2pOr0CCVlsTU8W1C3RCXQVNTS1IpbaCzJhAk3MCYYDwRkrk4TOu4jLBlPfi/b45/rASrCh0FXyQ5mGZ5sX77/nxmcqxFxH2WHcD09ghkqPyNdGZMEzX5JwW0t+v2EsPMaLQl66oPXE1CGtT4uWC/Yws3Ei1fxCbCrLxX9pdyQS50TGklDTlSYCkR68i5Y/wNmjd7Ihl6CBf/lPZsqXfSeoWwoI4Sb290RZu6mNKF9wjRCfcBS5xC0nS4DJixGiSEWLkCdR0GhPIwMbi9hodiZIa12aTqKQG1dWIfJAePYkmKjIRxTU+0ZWGIbWGjdKRf0XDAtRTMz6ljFgglYZm5DHA2qxgpzKeEGHKOcLoSRRLs0YCJvg09AoRC/E9Y5CYn6FOJ9WqdMdSdMQjKKJxkJ/lW5hiyc3wGenqHwD8vQpEG5BgatiYUUbaIp/PuCqAEPtdBebG3SVoZOOBCDogoKrV8nDDuMYcJk+OxF3EWRnCDXRKWDGh8Awn7Vx5ktCG7fUw67bt5KDv4ANaM9SaSia1uQ8Jv4Vh9C+/GP2UTKdUD0hTrECmG4YPjt4tTugPXsFfZtKxMl7w6XfL4/BaeVSz9BAUJw6qmkPxMGbSYOXvcie4Xqz8hqXnBPgZv8/knQzqLW0wzgt0/4g4WzP+fwd0XoWBwTl9/CT2hrj3/ZJx9fUTmzlEnGkY2eg7qOz0kxCgLxplloZhfI2ynickcPwZPid8n+MwO6Io9eJrG1tPbEBMBGjF8Kz7bJ5hmLkBsHRday/4kKq0ivyMqyJLfFNBU+f6/+Acju1N4ObOZ9XGSiRjnFkkbcay9oJP5jEPK48JZLKZZE4KeC3tecK5C0NCV9YvD8xZiHvTdHzEDFq7fnAmBkyltrP1tlQmoekff7my+D4YP+ajZ++B5czLbp/rX7Vnjb8Z91hXYvOxJxrMv3xOWzfvtiBfZ1O1uh67anzavWfz6XiYBNz+OSYqyB+tCB984YRrPDL/uxZMQy5JbPU1nduy/CmtJFYecwZYZMZghK94wB3idaY8a2b+FTuAZWZKy9BkkvjR0it+5VrbdIiQ+S+ZMszQ3mM6/OJ9fm3mBhp8p5ZhEhS5RXbeGhUTMMg+hB3uF6aKtMAbZauEu685nzcajtm3oivhygQNALHgHXH3Ra8M36nwWlkOm+GX5jlNn2xPetkhGFbSAM8oyQ5CZVexN1O/i+kvF4EAa8XM6AtpcmLxNKrUb1KgJ/0N/6DpFUYveGtUSFJHcJjS8xQcF5IkpZ+k87UWtnBF1p9PzidrMRNvotu+WDcFmbz85T4cijvUdjaN3eekdQSy5gL1dv84fdBEjjvM41no5LT/OLNXaocsMOpOTv7kn+ZofooXk5zO+cl0EXvLQDiW8/r75ONP2fthcRrkjfZLwR92d6Mg2M8723PK6cc0Ps0HsyDoj9a77jB36hqDqqn6bl0OuTflxHw6vXY77IYMepHzYJoV2j5rUWRpgOnq0SaqQcvyO+JSkAoK90GjvCzU3L5B290MMP+tldepKwvDwPor6QoAKYsPJGJRcJIgfrfdu0J6UE95erEg+MH3K8ISqnDR2qFbFw3ULsBcwxmpjpZ5IaQzRUdhIUVAYJxslm/P3AXSPTgP+kmv+ZyrKwyTVnB6/727Q0rrNPbmuwIb6Xf3y/j8L3F3gV+Dc3vYt7qR47rNqu/XaulQoEY6BShqd1vBarnVmen0BnA3rDvz1X7TD4LNbLWMscn91ySagawr8dcUlVBCCSWUUEIJJZRQQgkllFBCCSWUUII6/A9V8cbegIY0rAAAAABJRU5ErkJggg==" alt="" /><br />
-                        <p>Socket.IO</p>
+                            <p>Socket.IO</p>
                         </Fade>
                     </Col>
 
@@ -380,7 +383,7 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.simpleicons.org/php/777BB4" alt="" /><br />
-                        <p>Php</p>
+                            <p>Php</p>
                         </Fade>
                     </Col>
 
@@ -388,35 +391,35 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" /><br />
-                        <p>MySql</p>
+                            <p>MySql</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="" /><br />
-                        <p>Codeigniter</p>
+                            <p>Codeigniter</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="" /><br />
-                        <p>npm</p>
+                            <p>npm</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-3 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src="	https://cdn.simpleicons.org/postman/FF6C37" alt="" /><br />
-                        <p>Postman</p>
+                            <p>Postman</p>
                         </Fade>
                     </Col>
                     <Col xs={3} lg={2} className="techlogo mx-lg-3 my-2 py-1 rounded-5 text-center ">
                         <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <img src={api} alt="" className="rounded-5" /><br />
-                        <p>API</p>
+                            <p>API</p>
                         </Fade>
                     </Col>
                 </Row>
@@ -434,7 +437,7 @@ export const Portfolio = () => {
                         <div className="py-lg-4 ">
                             {/* <Fade direction="up" duration={1000} triggerOnce={true}> */}
 
-                                <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
+                            <h6 className="whoi"><b>{'<!--  Who am I  -->'}</b></h6>
                             {/* </Fade> */}
                             <Fade direction="up" duration={1000} triggerOnce={true}>
                                 <h4>Full-Stack Developer</h4>
@@ -459,12 +462,12 @@ export const Portfolio = () => {
             {/* project start */}
             <Container className="projectcontainer  text-lg-start text-center">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
-                    <Fade direction="up"  duration={1000} triggerOnce={true}>
-                    <h5>PORTFOLIO</h5>
+                    <Fade direction="up" duration={1000} triggerOnce={true}>
+                        <h5>PORTFOLIO</h5>
                         <h3 >Each project is a unique piece of development 🧩</h3>
                     </Fade>
                 </div>
-                <Fade direction="up"  duration={1000} triggerOnce={true}>
+                <Fade direction="up" duration={1000} triggerOnce={true}>
 
                     <Row className=" d-flex justify-content-center py-4 ">
                         <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
@@ -480,10 +483,14 @@ export const Portfolio = () => {
 
                     <>
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
+
+
+
+
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                <Col lg className="d-flex justify-content-center  align-items-center py-3">
                                     <div className="jobportal mx-1">
                                         <video controls poster={jobimg} className=" img-fluid ">
                                             <source src={jobvideo} type="video/mp4" />
@@ -491,7 +498,7 @@ export const Portfolio = () => {
                                         </video>
                                     </div>
                                 </Col>
-                                <Col md className=" d-flex justify-content-center  align-items-center ">
+                                <Col lg className=" d-flex justify-content-center  align-items-center ">
                                     <div>
                                         <h5><b >Job Portal</b></h5>
                                         <p>
@@ -542,10 +549,70 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
-                                    <div className="insure mx-1"></div>
+                                <Col md className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
+                                    <div className="chat mx-1"></div>
                                 </Col>
                                 <Col md className="d-flex justify-content-center  align-items-center   px-md-5">
+                                    <div>
+                                        <h5><b >Chat App</b></h5>
+                                        <p>
+                                            Created a full stack MERN chat app enabling secure one-to-one messaging with JWT for authentication
+                                            and Socket.io for real-time communication.Implemented a responsive UI with React, integrated MongoDB
+                                            for data storage, and ensured a smooth user experience with Reactstrap and Bootstrap.Incorporated Redux to streamline state management, improving data flow and scalability.
+                                        </p>
+                                        <Row className="    ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://skillicons.dev/icons?i=express" className=" stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-3 ">
+                                                <img src="https://jwt.io/img/pic_logo.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-3 ">
+                                                <img src="data:image/png;base64,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" className="stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/chatapp.git" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col md className="d-none d-lg-block d-flex justify-content-center  align-items-center">
+                                    <div className="chat mx-auto"></div>
+                                </Col>
+                            </Row>
+                        </Fade>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col lg className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
+                                    <div className="insure mx-1"></div>
+                                </Col>
+                                <Col lg className="d-flex justify-content-center  align-items-center   px-md-5">
                                     <div>
                                         <h5><b >Insure</b></h5>
                                         <p>
@@ -594,8 +661,52 @@ export const Portfolio = () => {
                                         </Row>
                                     </div>
                                 </Col>
-                                <Col md className="d-none d-md-block d-flex justify-content-center  align-items-center">
+                                <Col lg className="d-none d-lg-block d-flex justify-content-center  align-items-center">
                                     <div className="insure mx-auto"></div>
+                                </Col>
+                            </Row>
+                        </Fade>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col lg className="d-flex justify-content-center  align-items-center py-3" >
+                                    <div className="stremo mx-1"></div>
+                                </Col>
+                                <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
+                                    <div>
+                                        <h5><b >Stremo</b></h5>
+                                        <p>
+                                        Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase
+                                         frontend skills. With its modern design and user-friendly approach, Streamo offers
+                                          a seamless and engaging experience for users exploring the platform.
+                                        </p>
+                                        <Row className="mx-auto   ">
+                                        <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3 mx-auto">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/streamo.git" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
                                 </Col>
                             </Row>
                         </Fade>
@@ -604,10 +715,62 @@ export const Portfolio = () => {
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3" >
+                                <Col lg className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
+                                    <div className="eplan"></div>
+                                </Col>
+                                <Col lg className=" d-flex justify-content-center  align-items-center  px-md-5">
+                                    <div>
+                                        <h5><b >EPLAN MAKER</b></h5>
+                                        <p>
+                                            This project is about connect multiple hospital under a common network
+                                            and enable easy data transfer among hospital and shift patients etc...
+                                        </p>
+                                        <Row className="mx-auto ">
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className=" stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
+                                            </Col>
+                                            <Col xs={1} className="mx-2 px-4 ">
+                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
+                                            </Col>
+                                        </Row>
+                                        <Row className="py-3 mx-auto">
+                                            <Col>
+                                                <a href="https://github.com/ajoshvabi/eplan_maker" target="_blank">
+                                                    <button className="cssbuttons-io" >
+                                                        <span>
+                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                                <path
+                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                                                    fill="currentColor">
+                                                                </path>
+                                                            </svg>
+                                                            Code
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </Col>
+                                <Col lg className="d-none d-lg-block ">
+                                    <div className="eplan mx-auto "></div>
+                                </Col>
+                            </Row>
+                        </Fade>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+                                <Col lg className="d-flex justify-content-center  align-items-center py-3" >
                                     <div className="connectedcare mx-1"></div>
                                 </Col>
-                                <Col md className="d-flex justify-content-center  align-items-center  px-md-5">
+                                <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
                                     <div>
                                         <h5><b >CONNECTED CARE</b></h5>
                                         <p>
@@ -650,37 +813,43 @@ export const Portfolio = () => {
                                 </Col>
                             </Row>
                         </Fade>
-                        
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
 
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col md className="d-block d-md-none d-flex justify-content-center  align-items-center py-3">
-                                    <div className="eplan"></div>
+
+
+                    </>
+                    :
+                    <>
+                        <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
+
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
+                                    <img src={jet1} className="img-fluidd addressbuk" alt="" />
+                                    <img src={jet2} className="img-fluidd addressbuk" alt="" />
                                 </Col>
-                                <Col md className=" d-flex justify-content-center  align-items-center  px-md-5">
+                                <Col md className=" d-flex justify-content-center  align-items-center">
                                     <div>
-                                        <h5><b >EPLAN MAKER</b></h5>
-                                        <p>
-                                            This project is about connect multiple hospital under a common network
-                                            and enable easy data transfer among hospital and shift patients etc...
+                                        <h5><b >Simple Authentication App</b></h5>
+                                        <p>This Flutter app utilizes Firebase for authentication services, offering various methods
+                                            such as email-password authentication and Google authentication. The app is structured
+                                            with GetX for state management and navigation.
                                         </p>
-                                        <Row className="mx-auto ">
+                                        <Row className=" mx-auto   ">
                                             <Col xs={1} className="px-4 mx-2">
-                                                <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className=" stackicon" alt="" />
+                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
                                             </Col>
                                             <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
+                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
                                             </Col>
-                                            <Col xs={1} className="mx-2 px-4 ">
-                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
+                                            <Col xs={1} className="px-4 mx-2">
+                                                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
                                             </Col>
+
+
                                         </Row>
-                                        <Row className="py-3 mx-auto">
+                                        <Row className="py-3">
                                             <Col>
-                                                <a href="https://github.com/ajoshvabi/eplan_maker" target="_blank">
+                                                <a href="https://github.com/ajoshvabi/jet.git" target="_blank">
                                                     <button className="cssbuttons-io" >
                                                         <span>
                                                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -698,23 +867,25 @@ export const Portfolio = () => {
                                         </Row>
                                     </div>
                                 </Col>
-                                <Col md className="d-none d-md-block ">
-                                    <div className="eplan mx-auto "></div>
-                                </Col>
+                                <Col className="d-none d-md-block">
+                                    <Row>
+                                        <Col md >
+                                            <img src={jet1} className="img-fluid addressbuk" alt="" />
+                                        </Col>
+                                        <Col md >
+                                            <img src={jet2} className="img-fluid addressbuk" alt="" />
+                                        </Col>
+                                    </Row></Col>
+
                             </Row>
                         </Fade>
-
-                    </>
-                    :
-                    <>
-                        <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5 py-4">
-                                {/* <Col md className="d-flex justify-content-center  align-items-center py-3">
+                                <Col md className="d-flex justify-content-center  align-items-center py-3">
                                     <img src={addressbuk1} className="img-fluidd addressbuk" alt="" />
-                                    <img src={addressbuk2} className="img-fluidd addressbuk" alt="" />
-                                </Col> */}
+                                    <img src={addressbuk1} className="img-fluidd addressbuk" alt="" />
+                                </Col>
                                 <Col md className=" d-flex justify-content-center  align-items-center">
                                     <div>
                                         <h5><b >Address Buk </b>(Live project)</h5>
@@ -734,11 +905,11 @@ export const Portfolio = () => {
                                                 <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
                                             </Col>
                                         </Row>
-                                       
+
                                     </div>
                                 </Col>
                             </Row>
-                        </Fade> 
+                        </Fade>
 
                         <Fade direction="up" duration={1500} triggerOnce={true}>
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
@@ -806,14 +977,14 @@ export const Portfolio = () => {
 
             <Container id="contact" className="text-lg-start text-center my-3 mt-5 contactcontainer">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
-                    <Fade direction="up"  duration={1000} triggerOnce={true}>
-                    <h5>CONTACT</h5>
+                    <Fade direction="up" duration={1000} triggerOnce={true}>
+                        <h5>CONTACT</h5>
                         <h3>Don't be shy! Hit me up! 👇</h3>
                     </Fade>
                 </div>
                 <Row className="text-lg-start text-center mt-5">
                     <Col lg className="mx-lg-5 ">
-                    <Fade direction="up" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
                             <Row className="bg-info1">
                                 <Col lg={3} className="py-3 px-3 contactiocn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
@@ -826,7 +997,7 @@ export const Portfolio = () => {
                         </Fade>
                     </Col>
                     <Col lg >
-                    <Fade direction="up" duration={1000} triggerOnce={true}>
+                        <Fade direction="up" duration={1000} triggerOnce={true}>
 
                             <Row>
                                 <Col lg={3} className="px-3 py-3 contactiocn">

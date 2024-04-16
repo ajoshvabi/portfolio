@@ -1,0 +1,113 @@
+/* 
+The snackbar - position it at the bottom and in the middle of the screen 
+https://www.w3schools.com/howto/howto_js_snackbar.asp
+
+Material Design
+https://material.io/
+https://material.io/develop/web/components/snackbars
+*/
+
+/*
+  Operation
+  ==============================================
+  This CSS file works with HTML page containing components:
+
+    <link rel="stylesheet" href="/styles/snackbar.css"> <!-- snackbar popup CSS -->
+    <div id="snackbar">Some text some message..</div>   <!-- Associated HTML -->
+    <script src="/scripts/api/rest.js"></script>        <!-- Associated Script -->
+
+
+  The 'rest.js' file constains the following functions that show and hide the snackbar: 
+
+  1. gifgitClient.utils.showSnackbar(msg, timeout);
+        This shows the snackbar by adding the 'show' CSS class. It 'show' CSS class
+        has a 0.5s delay fadein animation. After that delay the remain animation 
+        is activated to keep it on the screen.
+        If a 'timeout' is present (!undefined) then the function will set up a delayed
+        call to 'gifgitClient.utils.hideSnackbar()';
+        If 'timeout' NOT present the snackbar will stay forever until 'gifgitClient.utils.hideSnackbar()'
+        is called.
+
+  2. gifgitClient.utils.hideSnackbar();
+        This hides the snackbar by setting the snackbar 'hide' CSS class.
+*/
+
+#snackbar {
+    /*visibility: hidden;*/ /* Hidden by default. Visible on click */
+    pointer-events: none;
+    opacity: 0;
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    z-index: 100000; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 0px; /* 30px from the bottom */
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    /*visibility: visible;*/ /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+
+    /* fadein the snackbar in for 0.5s then remain after 0.5 seconds */
+    -webkit-animation: snackbar-fadein 0.5s, snackbar-remain 3600s 0.5s;
+    animation: snackbar-fadein 0.5s, snackbar-remain 3600s 0.5s;
+
+    /* fadein the snackbar */
+    /*
+    -webkit-animation: snackbar-fadein 0.5s;
+    animation: snackbar-fadein 0.5s; 
+    */   
+  }
+
+ #snackbar.hide {
+  /* fadeout the snackbar */
+  -webkit-animation: snackbar-fadeout 0.2s;
+  animation: snackbar-fadeout 0.2s;    
+}
+  
+  /*
+   Animations 'fadein' 
+  */
+  @-webkit-keyframes snackbar-fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes snackbar-fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  /* 
+    Animations 'remain' 
+  */
+  @-webkit-keyframes snackbar-remain {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes snackbar-remain {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  /* 
+    Animations 'fadeout' 
+  */
+  @-webkit-keyframes snackbar-fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes snackbar-fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

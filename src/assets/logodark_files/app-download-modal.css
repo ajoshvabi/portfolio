@@ -1,0 +1,56 @@
+/* The Modal (background) */
+.app-download-modal {
+    position: relative;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    z-index: 9999996; /* Sit on top -- set higher than spectrum color picker */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .app-download-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;     
+    text-align: center;
+    background-color: #fefefe;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+  }
+
+  .app-download-modal-title {
+      display: block;
+      font-weight: bold;
+      font-size: 22px;
+  }
+  
+  /* The Close Button */
+  .app-download-modal-close {
+    color: #222;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .app-download-modal-close:hover,
+  .app-download-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .app-download-modal-legal {
+      font-size: 12px;
+      color: #222;
+  }
