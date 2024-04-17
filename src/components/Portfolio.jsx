@@ -614,7 +614,7 @@ export const Portfolio = () => {
     </Col>
     <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
         <div>
-            <h5><b >Straemo</b></h5>
+            <h5><b >Streamo</b></h5>
             <p>
             Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase
              frontend skills. With its modern design and user-friendly approach, Streamo offers
