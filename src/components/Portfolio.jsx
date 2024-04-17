@@ -608,6 +608,50 @@ export const Portfolio = () => {
                         </Fade>
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
+<Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+    <Col lg className="d-flex justify-content-center  align-items-center py-3" >
+        <div className="stremo mx-1"></div>
+    </Col>
+    <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
+        <div>
+            <h5><b >Straemo</b></h5>
+            <p>
+            Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase
+             frontend skills. With its modern design and user-friendly approach, Streamo offers
+              a seamless and engaging experience for users exploring the platform.
+            </p>
+            <Row className="mx-auto   ">
+            <Col xs={1} className="px-4 mx-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
+                </Col>
+                <Col xs={1} className="px-4 mx-2">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
+                </Col>
+            </Row>
+            <Row className="py-3 mx-auto">
+                <Col>
+                    <a href="https://github.com/ajoshvabi/streamo.git" target="_blank">
+                        <button className="cssbuttons-io" >
+                            <span>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                                Code
+                            </span>
+                        </button>
+                    </a>
+                </Col>
+            </Row>
+        </div>
+    </Col>
+</Row>
+</Fade>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
                                 <Col lg className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
                                     <div className="insure mx-1"></div>
@@ -666,52 +710,59 @@ export const Portfolio = () => {
                                 </Col>
                             </Row>
                         </Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col lg className="d-flex justify-content-center  align-items-center py-3" >
-                                    <div className="stremo mx-1"></div>
-                                </Col>
-                                <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
-                                    <div>
-                                        <h5><b >Stremo</b></h5>
-                                        <p>
-                                        Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase
-                                         frontend skills. With its modern design and user-friendly approach, Streamo offers
-                                          a seamless and engaging experience for users exploring the platform.
-                                        </p>
-                                        <Row className="mx-auto   ">
-                                        <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3 mx-auto">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/streamo.git" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Fade>
+                       
 
                         <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
+                        <Fade direction="up" duration={1500} triggerOnce={true}>
+
+<Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
+    <Col lg className="d-flex justify-content-center  align-items-center py-3" >
+        <div className="connectedcare mx-1"></div>
+    </Col>
+    <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
+        <div>
+            <h5><b >CONNECTED CARE</b></h5>
+            <p>
+                This project is about connect multiple hospital under a common network
+                and enable easy data transfer among hospital and shift patients etc...
+            </p>
+            <Row className="mx-auto   ">
+                <Col xs={1} className="px-4 mx-2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
+                </Col>
+                <Col xs={1} className="px-4 mx-2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className="stackicon" alt="" />
+                </Col>
+                <Col xs={1} className="px-4 mx-2">
+                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
+                </Col>
+                <Col xs={1} className="mx-2 px-4 ">
+                    <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
+                </Col>
+            </Row>
+            <Row className="py-3 mx-auto">
+                <Col>
+                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
+                        <button className="cssbuttons-io" >
+                            <span>
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                                        fill="currentColor">
+                                    </path>
+                                </svg>
+                                Code
+                            </span>
+                        </button>
+                    </a>
+                </Col>
+            </Row>
+        </div>
+    </Col>
+</Row>
+</Fade>
+
                         <Fade direction="up" duration={1500} triggerOnce={true}>
 
                             <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
@@ -764,56 +815,7 @@ export const Portfolio = () => {
                                 </Col>
                             </Row>
                         </Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col lg className="d-flex justify-content-center  align-items-center py-3" >
-                                    <div className="connectedcare mx-1"></div>
-                                </Col>
-                                <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
-                                    <div>
-                                        <h5><b >CONNECTED CARE</b></h5>
-                                        <p>
-                                            This project is about connect multiple hospital under a common network
-                                            and enable easy data transfer among hospital and shift patients etc...
-                                        </p>
-                                        <Row className="mx-auto   ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="mx-2 px-4 ">
-                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3 mx-auto">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Fade>
-
+                     
 
 
                     </>
