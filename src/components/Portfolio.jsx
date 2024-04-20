@@ -851,7 +851,7 @@ export const Portfolio = () => {
                                         </Row>
                                         <Row className="py-3">
                                             <Col>
-                                                <a href="https://github.com/ajoshvabi/jet.git" target="_blank">
+                                                <a href="https://github.com/ajoshvabi/authentication_firebase.git" target="_blank">
                                                     <button className="cssbuttons-io" >
                                                         <span>
                                                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
