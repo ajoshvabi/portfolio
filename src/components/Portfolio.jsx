@@ -1,19 +1,140 @@
-import React, { useEffect, useState } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
+import { Fade, JackInTheBox, Slide } from "react-awesome-reveal";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
-import cv from '../assets/Ajosh_V_Abi_.pdf';
-import abtimg from '../assets/about.jpg';
-import amazon1 from '../assets/amazon1.png';
-import amazon2 from '../assets/amazon2.png';
 import api from '../assets/api.png';
 import bgimg from '../assets/bgimg.png';
-import addressbuk1 from '../assets/errorbg.png';
-import jet1 from '../assets/jet1.png';
-import jet2 from '../assets/jet2.png';
-import jobimg from '../assets/jobportal.jpeg';
-import jobvideo from '../assets/videojob.mp4';
+import abtimg from '../assets/me.jpg';
+import cv from '../assets/my_cv.pdf';
 
 import "./portfolio.css";
+
+// Define the projects data (you can move this to a separate file if needed)
+const projectsData = {
+    web: [
+        {
+            category: "MERN STACK",
+            title: "Job Portal",
+            description: "This is a user-friendly job portal for easy job searches and applications. HR professionals can effortlessly post listings, review profiles, and make hires.",
+            image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
+            github: "https://github.com/ajoshvabi/jobapp",
+            demo: null,
+            stack: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"]
+        },
+        {
+            category: "MERN STACK",
+            title: "Chat App",
+            description: "Created a full stack MERN chat app enabling secure one-to-one messaging with JWT for authentication and Socket.io for real-time communication.",
+            image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
+            github: "https://github.com/ajoshvabi/chatapp",
+            demo: null,
+            stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Socket.io"]
+        },
+        {
+            category: "FRONTEND",
+            title: "Streamo",
+            description: "Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills with modern design and user-friendly approach.",
+            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+            github: "https://github.com/ajoshvabi/streamo",
+            demo: null,
+            stack: ["React", "Bootstrap"]
+        },
+        {
+            category: "FRONTEND",
+            title: "Insure",
+            description: "Insure is a React-based UI project designed to showcase frontend skills. With its modern design and user-friendly approach for exploring insurance details.",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+            github: "https://github.com/ajoshvabi/insure-site",
+            demo: "https://ajoshvabi.github.io/insure-site/",
+            stack: ["React", "Bootstrap"]
+        },
+        {
+            category: "ACADEMIC",
+            title: "Connected Care",
+            description: "This project connects multiple hospitals under a common network and enables easy data transfer among hospitals and shift patients.",
+            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+            github: "https://github.com/ajoshvabi/connected_care",
+            demo: null,
+            stack: ["CodeIgniter", "MySQL", "HTML", "CSS"]
+        },
+        {
+            category: "ACADEMIC",
+            title: "EPlan Maker",
+            description: "Enhanced planning system with streamlined workflows. Academic project demonstrating PHP development and database management skills.",
+            image: "https://raw.githubusercontent.com/ajoshvabi/web-images/refs/heads/main/images/eplan.jpg",
+            github: "https://github.com/ajoshvabi/eplan_maker",
+            demo: null,
+            stack: ["PHP", "MySQL", "HTML", "CSS"]
+        }
+    ],
+    mobile: [
+        {
+            category: "FLUTTER",
+            title: "Health Monitoring App",
+            description: "This is a cross-platform health monitoring app, integrating Bluetooth medical devices for real-time vitals tracking. It includes video calls for doctor consultations and deep linking for seamless navigation.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/hpn.jpg?raw=true",
+            github: null,
+            demo: null,
+            stack: ["Flutter", "Dart", "Provider", "Bluetooth", "WebRTC"],
+            badge: null
+        },
+        {
+            category: "FLUTTER",
+            title: "Educational App",
+            description: "An educational app that facilitates teacher-parent communication, real-time chat, class scheduling, sending notifications for upcoming events. It ensures seamless communication and keeps both teachers and parents.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/education.jpg?raw=true",
+            github: null,
+            demo: "https://play.google.com/store/apps/details?id=com.Manifold.manifoldcoachingKerala",
+            stack: ["Flutter", "Dart", "Firebase", "Provider"],
+            badge: null
+        },
+
+        {
+            category: "FLUTTER",
+            title: "Music App",
+            description: "A musical app for event singers that allows users to view and perform songs featured in events, with integrated audio playback and Syriac musical notation display.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/song.jpg?raw=true",
+            github: null,
+            demo: "https://play.google.com/store/apps/details?id=com.reon.syriac",
+            stack: ["Flutter", "Dart", "BLoC", "Clean Architecture"],
+            badge: null
+        }
+        ,
+        {
+            category: "FLUTTER",
+            title: "Simple Authentication App",
+            description: "This Flutter app utilizes Firebase for authentication services, offering various methods such as email-password and Google authentication with GetX.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/auth.jpg?raw=true", // Assuming imported
+            github: "https://github.com/ajoshvabi/authentication_firebase",
+            demo: null,
+            stack: ["Flutter", "Dart", "Firebase", "GetX"],
+            badge: null
+        },
+        {
+            category: "FLUTTER",
+            title: "Address Buk",
+            description: "Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and Public roles for complete shop management.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/address.jpg?raw=true", // Assuming imported
+            github: "https://github.com/ajoshvabi/address_buk_staff",
+            demo: null,
+            stack: ["Flutter", "Dart", "Firebase"],
+            badge: null
+        },
+        {
+            category: "FLUTTER",
+            title: "Shopping App",
+            description: "Created a simple Flutter shopping app with user-friendly interface and integrated API calls for product data, showcasing mobile development skills.",
+            image: "https://github.com/ajoshvabi/web-images/blob/main/images/shoppingimg.jpg?raw=true", // Assuming imported
+            github: "https://github.com/ajoshvabi/flutter_shop_app",
+            demo: null,
+            stack: ["Flutter", "Dart", "REST API"]
+        }
+    ]
+};
+
+// Default image URL if no image is provided
+const defaultImage = "https://via.placeholder.com/800x600?text=No+Image";
+
+
 export const Portfolio = () => {
     const [theme, settheme] = useState(false)
     const [category, setCategory] = useState(false)
@@ -106,6 +227,11 @@ export const Portfolio = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+
+
+    const currentProjects = category ? projectsData.web : projectsData.mobile;
+
     return (
         <>
             {/* <Fade duration={2000} triggerOnce={true}> */}
@@ -445,11 +571,7 @@ export const Portfolio = () => {
                             <Fade direction="up" duration={1000} triggerOnce={true}>
 
                                 <p className="mt-3" >
-                                    I'm passionate developer who works with the Flutter and MERN stack,
-                                    which involves using Flutter, Firebase, MongoDB, Express.js, React.js, and Node.js. I'm
-                                    skilled in both creating the visual part of websites and the behind-thescenes coding.
-                                    I really enjoy making websites and mobile apps look great and user-friendly.
-                                    I'm always learning and excited to be part of a development team.
+                                    I'm a passionate developer with expertise in Flutter and a strong foundation in backend development, specializing in production-ready applications with modular code design, real-time communication, API integration, and cross-platform mobile solutions. Experienced in iOS and Play Store app deployment, I focus on crafting intuitive user interfaces while building scalable and maintainable backend services. I enjoy solving complex problems, optimizing application performance, and continuously learning emerging technologies, and I thrive in collaborative, innovative, technology-driven teams.
                                 </p>
                             </Fade>
                         </div>
@@ -460,520 +582,81 @@ export const Portfolio = () => {
             {/* about end */}
 
             {/* project start */}
-            <Container className="projectcontainer  text-lg-start text-center">
+            {/* Portfolio Section */}
+            {/* project start */}
+            {/* Portfolio Section */}
+            <Container id="project" className="projectcontainer text-lg-start text-center my-5">
                 <div className="my-4 mx-lg-5 mx-2 portfolio">
-                    <Fade direction="up" duration={1000} triggerOnce={true}>
+                    <Fade direction="up" duration={1000} triggerOnce>
                         <h5>PORTFOLIO</h5>
-                        <h3 >Each project is a unique piece of development 🧩</h3>
+                        <h3>Each project is a unique piece of development 🧩</h3>
                     </Fade>
                 </div>
                 <Fade direction="up" duration={1000} triggerOnce={true}>
-
-                    <Row className=" d-flex justify-content-center py-4 ">
-                        <Col xs={5} className={`${category ? "categorynonactive " : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={category ? changecategory : undefined}>
-                            <label className="mx-auto py-2 fw-bolder pointer">Web Applications</label>
-                        </Col>
-                        <Col xs={5} className={`${category ? 'categoryactive text-white ' : 'categorynonactive'} d-flex pointer align-items-center justify-content-center  rounded-3 mx-2`} onClick={!category ? changecategory : undefined}>
+                    <Row className="d-flex justify-content-center py-4">
+                        <Col xs={5} className={`${category ? "categorynonactive" : 'categoryactive text-white'} d-flex pointer align-items-center justify-content-center rounded-3 mx-2`} onClick={!category ? undefined : changecategory}>
                             <label className="mx-auto py-2 fw-bolder pointer">Mobile Apps</label>
+
+                        </Col>
+                        <Col xs={5} className={`${category ? 'categoryactive text-white' : 'categorynonactive'} d-flex pointer align-items-center justify-content-center rounded-3 mx-2`} onClick={category ? undefined : changecategory}>
+                            <label className="mx-auto py-2 fw-bolder pointer">Web Applications</label>
+
+
                         </Col>
                     </Row>
                 </Fade>
-                {!category ?
+                <div>
+                    <Row className="g-4 mx-lg-5 mx-2">
+                        {currentProjects.map((project) => (
 
+                            <Col lg={4} md={6} key={project.id}>
+                                <Slide direction="up" duration={1000} triggerOnce={true}>
+                                    <div className="project-box shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column">
+                                        <img
+                                            src={project.image || defaultImage}
+                                            alt={project.title}
+                                            className="project-img w-100"
+                                        />
+                                        <div className="p-3 text-start d-flex flex-column flex-grow-1">
+                                            <p className="small mb-1">{project.category}</p>
+                                            <h5 className="fw-bold">{project.title}</h5>
+                                            <p className="flex-grow-1">{project.description}</p>
+                                            {project.stack && (
+                                                <div className="mt-2">
+                                                    {project.stack.map((tech, index) => (
+                                                        <span key={index} className=" bg-secondary-css">
+                                                            <JackInTheBox direction="up" duration={1000} triggerOnce={true}>
 
-                    <>
-                        <h6 className="whoi my-4 mx-lg-5 mx-2 "> MERN Stack Projects</h6>
-
-
-
-
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2">
-                                <Col lg className="d-flex justify-content-center  align-items-center py-3">
-                                    <div className="jobportal mx-1">
-                                        <video controls poster={jobimg} className=" img-fluid ">
-                                            <source src={jobvideo} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </div>
-                                </Col>
-                                <Col lg className=" d-flex justify-content-center  align-items-center ">
-                                    <div>
-                                        <h5><b >Job Portal</b></h5>
-                                        <p>
-                                            This is a user-friendly job portal for easy job searches and applications. HR professionals can
-                                            effortlessly post listings, review profiles, and make hires. The project highlights my web
-                                            development skills, incorporating libraries for improved design and functionality.
-                                        </p>
-                                        <Row className=" mx-auto   ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://skillicons.dev/icons?i=express" className=" stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="mx-2 px-3 ">
-                                                <img src="https://react-bootstrap.netlify.app/img/logo.svg" className="stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/jobapp" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
+                                                                {tech}
+                                                            </JackInTheBox>
                                                         </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
+                                                    ))}
+                                                </div>
+                                            )}
+                                            <div className="mt-3">
+                                                {project.github && (
+                                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-light fw-semibold me-2">
+                                                        GitHub
+                                                    </a>
+                                                )}
+                                                {project.demo && (
+                                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-light fw-semibold">
+                                                        &nbsp;Demo&nbsp;
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
-                                </Col>
-                            </Row>
-                        </Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
+                                </Slide>
+                            </Col>
 
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col md className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
-                                    <div className="chat mx-1"></div>
-                                </Col>
-                                <Col md className="d-flex justify-content-center  align-items-center   px-md-5">
-                                    <div>
-                                        <h5><b >Chat App</b></h5>
-                                        <p>
-                                            Created a full stack MERN chat app enabling secure one-to-one messaging with JWT for authentication
-                                            and Socket.io for real-time communication.Implemented a responsive UI with React, integrated MongoDB
-                                            for data storage, and ensured a smooth user experience with Reactstrap and Bootstrap.Incorporated Redux to streamline state management, improving data flow and scalability.
-                                        </p>
-                                        <Row className="    ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
+                        ))}
 
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://skillicons.dev/icons?i=express" className=" stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="mx-2 px-3 ">
-                                                <img src="https://jwt.io/img/pic_logo.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="mx-2 px-3 ">
-                                                <img src="data:image/png;base64,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" className="stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/chatapp.git" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                                <Col md className="d-none d-lg-block d-flex justify-content-center  align-items-center">
-                                    <div className="chat mx-auto"></div>
-                                </Col>
-                            </Row>
-                        </Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-<Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-    <Col lg className="d-flex justify-content-center  align-items-center py-3" >
-        <div className="stremo mx-1"></div>
-    </Col>
-    <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
-        <div>
-            <h5><b >Streamo</b></h5>
-            <p>
-            Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase
-             frontend skills. With its modern design and user-friendly approach, Streamo offers
-              a seamless and engaging experience for users exploring the platform.
-            </p>
-            <Row className="mx-auto   ">
-            <Col xs={1} className="px-4 mx-2">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                </Col>
-                <Col xs={1} className="px-4 mx-2">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
-                </Col>
-            </Row>
-            <Row className="py-3 mx-auto">
-                <Col>
-                    <a href="https://github.com/ajoshvabi/streamo.git" target="_blank">
-                        <button className="cssbuttons-io" >
-                            <span>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path
-                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                        fill="currentColor">
-                                    </path>
-                                </svg>
-                                Code
-                            </span>
-                        </button>
-                    </a>
-                </Col>
-            </Row>
-        </div>
-    </Col>
-</Row>
-</Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col lg className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
-                                    <div className="insure mx-1"></div>
-                                </Col>
-                                <Col lg className="d-flex justify-content-center  align-items-center   px-md-5">
-                                    <div>
-                                        <h5><b >Insure</b></h5>
-                                        <p>
-                                            Insure is a React-based UI project designed to showcase frontend skills. With its modern
-                                            design and user-friendly approach, Insure offers a seamless and engaging experience for users
-                                            exploring insurance details.
-                                        </p>
-                                        <Row className="mx-auto">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3">
-                                            <Col xs={6} lg={3} className=" d-flex justify-content-end " >
-                                                <a href="https://github.com/ajoshvabi/insure-site" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="16" width="16">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                            <Col xs={6} lg={3} className="d-flex justify-content-start" >
-                                                <a href="https://ajoshvabi.github.io/insure-site/" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                                            </svg>
-                                                            Demo
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                                <Col lg className="d-none d-lg-block d-flex justify-content-center  align-items-center">
-                                    <div className="insure mx-auto"></div>
-                                </Col>
-                            </Row>
-                        </Fade>
-                       
-
-                        <h6 className="whoi my-4 mx-lg-5 mx-2 "> Academic Projects</h6>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-<Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-    <Col lg className="d-flex justify-content-center  align-items-center py-3" >
-        <div className="connectedcare mx-1"></div>
-    </Col>
-    <Col lg className="d-flex justify-content-center  align-items-center  px-md-5">
-        <div>
-            <h5><b >CONNECTED CARE</b></h5>
-            <p>
-                This project is about connect multiple hospital under a common network
-                and enable easy data transfer among hospital and shift patients etc...
-            </p>
-            <Row className="mx-auto   ">
-                <Col xs={1} className="px-4 mx-2">
-                    <img src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg" className=" stackicon" alt="" />
-                </Col>
-                <Col xs={1} className="px-4 mx-2">
-                    <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className="stackicon" alt="" />
-                </Col>
-                <Col xs={1} className="px-4 mx-2">
-                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
-                </Col>
-                <Col xs={1} className="mx-2 px-4 ">
-                    <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
-                </Col>
-            </Row>
-            <Row className="py-3 mx-auto">
-                <Col>
-                    <a href="https://github.com/ajoshvabi/connected_care" target="_blank">
-                        <button className="cssbuttons-io" >
-                            <span>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path
-                                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                        fill="currentColor">
-                                    </path>
-                                </svg>
-                                Code
-                            </span>
-                        </button>
-                    </a>
-                </Col>
-            </Row>
-        </div>
-    </Col>
-</Row>
-</Fade>
-
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5  mx-2">
-                                <Col lg className="d-block d-lg-none d-flex justify-content-center  align-items-center py-3">
-                                    <div className="eplan"></div>
-                                </Col>
-                                <Col lg className=" d-flex justify-content-center  align-items-center  px-md-5">
-                                    <div>
-                                        <h5><b >EPLAN MAKER</b></h5>
-                                        <p>
-                                            This project is about connect multiple hospital under a common network
-                                            and enable easy data transfer among hospital and shift patients etc...
-                                        </p>
-                                        <Row className="mx-auto ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="	https://cdn.worldvectorlogo.com/logos/php-1.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" className=" stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="mx-2 px-4 ">
-                                                <img src="	https://cdn.worldvectorlogo.com/logos/css-3.svg" className="stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-                                        <Row className="py-3 mx-auto">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/eplan_maker" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                                <Col lg className="d-none d-lg-block ">
-                                    <div className="eplan mx-auto "></div>
-                                </Col>
-                            </Row>
-                        </Fade>
-                     
-
-
-                    </>
-                    :
-                    <>
-                        <h6 className="whoi my-4 mx-lg-5 mx-2 "> Flutter Projects</h6>
-
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
-                                    <img src={jet1} className="img-fluidd addressbuk" alt="" />
-                                    <img src={jet2} className="img-fluidd addressbuk" alt="" />
-                                </Col>
-                                <Col md className=" d-flex justify-content-center  align-items-center">
-                                    <div>
-                                        <h5><b >Simple Authentication App</b></h5>
-                                        <p>This Flutter app utilizes Firebase for authentication services, offering various methods
-                                            such as email-password authentication and Google authentication. The app is structured
-                                            with GetX for state management and navigation.
-                                        </p>
-                                        <Row className=" mx-auto   ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
-                                            </Col>
-
-
-                                        </Row>
-                                        <Row className="py-3">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/authentication_firebase.git" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                                <Col className="d-none d-md-block">
-                                    <Row>
-                                        <Col md >
-                                            <img src={jet1} className="img-fluid addressbuk" alt="" />
-                                        </Col>
-                                        <Col md >
-                                            <img src={jet2} className="img-fluid addressbuk" alt="" />
-                                        </Col>
-                                    </Row></Col>
-
-                            </Row>
-                        </Fade>
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2  px-md-2 px-lg-5 py-4">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3">
-                                    <img src={addressbuk1} className="img-fluidd addressbuk" alt="" />
-                                    <img src={addressbuk1} className="img-fluidd addressbuk" alt="" />
-                                </Col>
-                                <Col md className=" d-flex justify-content-center  align-items-center">
-                                    <div>
-                                        <h5><b >Address Buk </b>(Live project)</h5>
-                                        <p>
-                                            Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and
-                                            Public roles. Admins manage staff and shops; Staff update shop details. Public users
-                                            search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.
-                                        </p>
-                                        <Row className=" mx-auto   ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" className=" stackicon" alt="" />
-                                            </Col>
-                                        </Row>
-
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Fade>
-
-                        <Fade direction="up" duration={1500} triggerOnce={true}>
-                            <Row className="my-3 mx-lg-5 projectborder shadow rounded-4 py-lg-5 mx-2 px-md-2 px-lg-5">
-                                <Col md className="d-flex justify-content-center  align-items-center py-3 d-block d-md-none">
-                                    <img src={amazon1} className="img-fluidd addressbuk" alt="" />
-                                    <img src={amazon2} className="img-fluidd addressbuk" alt="" />
-                                </Col>
-                                <Col md className=" d-flex justify-content-center  align-items-center">
-                                    <div>
-                                        <h5><b >Shopping App</b></h5>
-                                        <p>Created a simple Flutter shopping app with a user-friendly interface and integrated API calls
-                                            for product data, showcasing proficiency in mobile app development,
-                                            API integration, and UI design.
-                                        </p>
-                                        <Row className=" mx-auto   ">
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" className="stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2">
-                                                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" className="img-fluid1 stackicon" alt="" />
-                                            </Col>
-                                            <Col xs={1} className="px-4 mx-2 ">
-                                                <img src={api} className="stackicon rounded-5" alt="" />
-                                            </Col>
-
-
-                                        </Row>
-                                        <Row className="py-3">
-                                            <Col>
-                                                <a href="https://github.com/ajoshvabi/flutter_shop_app" target="_blank">
-                                                    <button className="cssbuttons-io" >
-                                                        <span>
-                                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                                                <path
-                                                                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-                                                                    fill="currentColor">
-                                                                </path>
-                                                            </svg>
-                                                            Code
-                                                        </span>
-                                                    </button>
-                                                </a>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                </Col>
-                                <Col className="d-none d-md-block">
-                                    <Row>
-                                        <Col md >
-                                            <img src={amazon1} className="img-fluid addressbuk" alt="" />
-                                        </Col>
-                                        <Col md >
-                                            <img src={amazon2} className="img-fluid addressbuk" alt="" />
-                                        </Col>
-                                    </Row></Col>
-
-                            </Row>
-                        </Fade>
-
-                    </>}
+                    </Row>
+                </div>
             </Container>
+            {/* project end */}
+
 
             {/* project end */}
 
@@ -1015,7 +698,6 @@ export const Portfolio = () => {
                     <Col></Col>
                     <Col></Col>
                 </Row>
-
             </Container>
 
             <hr />
