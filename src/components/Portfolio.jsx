@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Fade, JackInTheBox, Slide } from "react-awesome-reveal";
 import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import api from '../assets/api.png';
 import bgimg from '../assets/bgimg.png';
 import abtimg from '../assets/me.jpg';
@@ -231,14 +232,16 @@ export const Portfolio = () => {
 
 
     const currentProjects = category ? projectsData.web : projectsData.mobile;
-
+    const navigate = useNavigate();
+    const handleContactClick = () => {
+        navigate('/about');
+    };
     return (
         <>
             {/* <Fade duration={2000} triggerOnce={true}> */}
             {/* navbar */}
             <Navbar expand="lg" className="navbg fixed-top ">
                 <Container >
-
                     <Navbar.Brand href="#home" className="icon1">
                         Aj.Dev
                     </Navbar.Brand>
@@ -573,6 +576,9 @@ export const Portfolio = () => {
                                 <p className="mt-3" >
                                     I'm a passionate developer with expertise in Flutter and a strong foundation in backend development, specializing in production-ready applications with modular code design, real-time communication, API integration, and cross-platform mobile solutions. Experienced in iOS and Play Store app deployment, I focus on crafting intuitive user interfaces while building scalable and maintainable backend services. I enjoy solving complex problems, optimizing application performance, and continuously learning emerging technologies, and I thrive in collaborative, innovative, technology-driven teams.
                                 </p>
+                                <button onClick={handleContactClick} className="nav-button">
+                                    Read More
+                                </button>
                             </Fade>
                         </div>
                     </Col>
