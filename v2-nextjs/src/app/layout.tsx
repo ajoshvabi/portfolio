@@ -16,9 +16,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aj.Dev | Portfolio Experience",
-  description: "Creative developer portfolio featuring 3D experiences, modern web architecture, and premium design.",
-  keywords: ["Aj.Dev", "Portfolio", "Next.js", "Three.js", "Creative Developer", "React"],
+  title: "Ajosh V Abi | Experienced Flutter, MERN, Web Developer in Kerala, India",
+  description: "Ajosh V Abi – professional Flutter developer and freelancer based in Kerala, India. Specializing in Flutter, MERN stack, Node.js, web development, API integration, custom mobile apps, and complex UI solutions.",
+  keywords: [
+    "Ajosh V Abi", 
+    "Flutter developer Kerala", 
+    "Flutter developer India", 
+    "freelance Flutter developer", 
+    "web developer Kerala", 
+    "mobile app developer", 
+    "MERN stack developer", 
+    "Node.js developer", 
+    "Express.js developer", 
+    "API integration expert", 
+    "React developer", 
+    "full stack developer India",
+    "mobile app development Kerala",
+    "web application development Kerala",
+    "Flutter freelancer Cochin",
+    "app developers in Kochi",
+    "best Flutter developer Kerala",
+    "software development services Kerala",
+    "full stack developer Kochi",
+    "MERN stack developers Kochi",
+    "cross platform app developers Kerala",
+    "freelance web developer Kerala"
+  ],
+  verification: {
+    google: "G9zEV20LfAUd9Pex_1ZfohVm1a2yH1x9e9l9mupXn_E",
+  },
 };
 
 export default function RootLayout({
