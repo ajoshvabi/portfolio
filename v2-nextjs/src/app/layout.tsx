@@ -44,7 +44,15 @@ export const metadata: Metadata = {
     "full stack developer Kochi",
     "MERN stack developers Kochi",
     "cross platform app developers Kerala",
-    "freelance web developer Kerala"
+    "freelance web developer Kerala",
+    "multiplatform mobile development",
+    "cross platform app dev",
+    "hire full stack developer",
+    "custom mobile app development",
+    "mern full stack developer",
+    "flutter mobile app development",
+    "custom mobile development",
+    "mobile app custom development"
   ],
   verification: {
     google: [

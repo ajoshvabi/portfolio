@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     "Kochi Flutter freelancers",
     "mobile app development Kochi",
     "cross platform app developer Kerala",
+    "multiplatform mobile development",
+    "cross platform app dev",
+    "hire full stack developer",
+    "mern stack developer",
+    "flutter app development",
     "Ajosh V Abi"
   ],
 };
