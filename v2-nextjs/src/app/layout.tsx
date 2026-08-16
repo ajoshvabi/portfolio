@@ -16,8 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajosh V Abi | Experienced Flutter, MERN, Web Developer in Kerala, India",
-  description: "Ajosh V Abi – professional Flutter developer and freelancer based in Kerala, India. Specializing in Flutter, MERN stack, Node.js, web development, API integration, custom mobile apps, and complex UI solutions.",
+  metadataBase: new URL("https://ajoshvabi.netlify.app"),
+  alternates: {
+    canonical: "/",
+  },
+  title: "Ajosh V Abi | Freelance Flutter & MERN Developer in Kerala",
+  description: "Freelance Flutter & MERN developer in Kerala, India. Building custom mobile apps, web solutions, and scalable API architecture.",
   keywords: [
     "Ajosh V Abi", 
     "Flutter developer Kerala", 
@@ -64,6 +68,25 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Ajosh V Abi",
+                "url": "https://ajoshvabi.netlify.app",
+                "jobTitle": "Flutter and MERN Stack Developer",
+                "knowsAbout": ["Flutter", "Dart", "MERN Stack", "Node.js", "React", "Mobile Development"],
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Kochi",
+                  "addressRegion": "Kerala",
+                  "addressCountry": "India"
+                }
+              })
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>

@@ -16,8 +16,8 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center md:items-end gap-3">
-          <div className="flex items-center gap-6">
+        <div className="flex flex-col items-center md:items-end gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2">
             <a 
               href="mailto:ajoshvabi17@gmail.com" 
               className="text-xs font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors"
@@ -44,6 +44,34 @@ export function Footer() {
               className="text-xs font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors"
             >
               LinkedIn
+            </a>
+            <a 
+              href="https://x.com/ajoshvabi" 
+              target="_blank" 
+              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors"
+            >
+              X
+            </a>
+            <a 
+              href="https://instagram.com/ajoshvabi" 
+              target="_blank" 
+              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors"
+            >
+              Instagram
+            </a>
+            <a 
+              href="https://facebook.com/ajoshvabi" 
+              target="_blank" 
+              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors"
+            >
+              Facebook
+            </a>
+            <a 
+              href="https://youtube.com/" 
+              target="_blank" 
+              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors"
+            >
+              YouTube
             </a>
           </div>
           <p className="text-[10px] text-outline/50 uppercase tracking-wider">
