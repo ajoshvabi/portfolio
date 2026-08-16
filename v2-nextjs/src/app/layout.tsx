@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Ajosh V Abi | Freelance Flutter & MERN Developer in Kerala",
   description: "Freelance Flutter & MERN developer in Kerala, India. Building custom mobile apps, web solutions, and scalable API architecture.",
   keywords: [
+    "Ajosh",
     "Ajosh V Abi", 
     "Flutter developer Kerala", 
     "Flutter developer India", 

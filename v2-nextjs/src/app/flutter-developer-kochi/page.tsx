@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "cross platform app dev",
     "mern stack developer",
     "flutter app development",
+    "Ajosh",
     "Ajosh V Abi"
   ],
 };

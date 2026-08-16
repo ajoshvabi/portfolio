@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "hire full stack developer",
     "mern stack developer",
     "flutter app development",
+    "Ajosh",
     "Ajosh V Abi"
   ],
 };
