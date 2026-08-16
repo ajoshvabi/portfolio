@@ -47,7 +47,10 @@ export const metadata: Metadata = {
     "freelance web developer Kerala"
   ],
   verification: {
-    google: "LCKntYHX4XPjjKu-NH1YvhQ6CROStL-7vI8nl-Q9P7g",
+    google: [
+      "LCKntYHX4XPjjKu-NH1YvhQ6CROStL-7vI8nl-Q9P7g",
+      "G9zEV20LfAUd9Pex_1ZfohVm1a2yH1x9e9l9mupXn_E"
+    ],
   },
 };
 
