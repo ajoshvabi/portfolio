@@ -30,14 +30,14 @@ export default function EditProjectPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const authorized = window.location.port === "3001";
+    import("@/lib/adminAuth").then(({ checkAdminAuth }) => {
+      const authorized = checkAdminAuth();
       setIsAuthorized(authorized);
       setCheckingAuth(false);
       if (!authorized) {
         router.replace("/projects");
       }
-    }
+    });
   }, [router]);
 
   useEffect(() => {

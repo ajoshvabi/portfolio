@@ -45,34 +45,6 @@ export function Footer() {
             >
               LinkedIn
             </a>
-            <a 
-              href="https://x.com/ajoshvabi" 
-              target="_blank" 
-              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors"
-            >
-              X
-            </a>
-            <a 
-              href="https://instagram.com/ajoshvabi" 
-              target="_blank" 
-              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors"
-            >
-              Instagram
-            </a>
-            <a 
-              href="https://facebook.com/ajoshvabi" 
-              target="_blank" 
-              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-primary transition-colors"
-            >
-              Facebook
-            </a>
-            <a 
-              href="https://youtube.com/" 
-              target="_blank" 
-              className="text-xs font-bold uppercase tracking-widest text-outline hover:text-secondary transition-colors"
-            >
-              YouTube
-            </a>
           </div>
           <p className="text-[10px] text-outline/50 uppercase tracking-wider">
             &copy; {new Date().getFullYear()} Ajosh V Abi. All rights reserved.

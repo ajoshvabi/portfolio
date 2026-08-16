@@ -1,11 +1,11 @@
 import { Hero } from "@/features/home/Hero";
 import { AboutMe } from "@/features/home/AboutMe";
 import { About } from "@/features/home/About";
-import { Contact } from "@/features/home/Contact";
 import { Projects } from "@/features/home/Projects";
 import { Services } from "@/features/home/Services";
 import { Stack } from "@/features/home/Stack";
 import { Blog } from "@/features/home/Blog";
+import { BottomCTA } from "@/features/home/BottomCTA";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Services />
       <Blog />
       {/* <Testimonials /> */}
-      <Contact />
+      <BottomCTA />
     </div>
   );
 }

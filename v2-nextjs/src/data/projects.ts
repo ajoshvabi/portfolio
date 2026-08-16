@@ -1,8 +1,10 @@
 export type Project = {
   id?: string;
+  slug?: string;           // URL-friendly identifier for /projects/[slug]
   category: string;
   title: string;
   description: string;
+  longDescription?: string; // Extended description for the detail page
   image: string;
   github: string | null;
   demo: string | null;
@@ -15,5 +17,5 @@ export type Project = {
 
 export const projectsData: { web: Project[]; mobile: Project[] } = {
   web: [],
-  mobile: []
+  mobile: [],
 };

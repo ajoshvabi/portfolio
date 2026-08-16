@@ -51,8 +51,8 @@ export function AboutMe() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
         {/* Left: Text Content */}
         <div className="md:col-span-7 space-y-8 relative z-10">
-          <div className="flex flex-col gap-6 mb-6">
-            <div className={`w-20 h-20 md:w-24 md:h-24 rounded-3xl overflow-hidden border-2 border-primary/30 p-1 shrink-0 relative group shadow-[0_0_20px_rgba(0,219,233,0.15)] ${loading ? 'animate-pulse bg-white/[0.04]' : ''}`}>
+          <div className="flex flex-col sm:flex-row items-start gap-6 mb-6">
+            <div className={`w-28 h-28 md:w-36 md:h-36 rounded-3xl overflow-hidden border-2 border-primary/30 p-1 shrink-0 relative group shadow-[0_0_25px_rgba(0,219,233,0.2)] ${loading ? 'animate-pulse bg-white/[0.04]' : ''}`}>
               {/* Outer glow and placeholder background */}
               <div className="absolute inset-0 bg-primary/20 animate-pulse rounded-[1.4rem]"></div>
               {/* Image */}

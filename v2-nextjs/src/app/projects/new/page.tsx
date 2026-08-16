@@ -26,14 +26,14 @@ export default function NewProjectPage() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const authorized = window.location.port === "3001";
+    import("@/lib/adminAuth").then(({ checkAdminAuth }) => {
+      const authorized = checkAdminAuth();
       setIsAuthorized(authorized);
       setCheckingAuth(false);
       if (!authorized) {
         router.replace("/projects");
       }
-    }
+    });
   }, [router]);
 
   async function handleSave(e: React.FormEvent) {

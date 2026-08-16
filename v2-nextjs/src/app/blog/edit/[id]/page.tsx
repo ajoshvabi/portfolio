@@ -41,14 +41,14 @@ export default function EditBlogPage() {
   const [checkingAuth, setCheckingAuth] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const authorized = window.location.port === "3001";
+    import("@/lib/adminAuth").then(({ checkAdminAuth }) => {
+      const authorized = checkAdminAuth();
       setIsAuthorized(authorized);
       setCheckingAuth(false);
       if (!authorized) {
         router.replace("/blog");
       }
-    }
+    });
   }, [router]);
 
   const [title, setTitle] = useState("");
