@@ -150,7 +150,7 @@ export const Portfolio = () => {
         // 
     }, [theme, category])
     const words = [
-        'Hi i am Ajosh',
+        'Hi i am Ajosh Abi',
         'Flutter Developer',
         'MERN stack Developer',
         'Front-end Developer',
