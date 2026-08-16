@@ -70,7 +70,7 @@ const projectsData = {
     mobile: [
         {
             category: "FLUTTER",
-            title: "Health Monitoring App",
+            title: "Health Monitoring Appee",
             description: "This is a cross-platform health monitoring app, integrating Bluetooth medical devices for real-time vitals tracking. It includes video calls for doctor consultations and deep linking for seamless navigation.",
             image: "https://github.com/ajoshvabi/web-images/blob/main/images/hpn.jpg?raw=true",
             github: null,

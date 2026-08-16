@@ -1,0 +1,4 @@
+[build]
+  base = "v2-nextjs"
+  publish = ".next"
+  command = "npm run build"
